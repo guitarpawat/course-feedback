@@ -1,5 +1,5 @@
 # Course Feedback
-***Object Oriented Programming II course projectby Pawat Nakpiphatkul and Noppawan Kulchol***
+***Object Oriented Programming II course project by Pawat Nakpiphatkul and Noppawan Kulchol***
 
 ## About the Program
 *`TODO`*
