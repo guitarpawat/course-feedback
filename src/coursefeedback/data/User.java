@@ -8,12 +8,12 @@ import java.util.List;
  * @author Pawat Nakpiphatkul
  */
 public class User {
-    private final String userID;
-    private final String firstName;
-    private final String lastName;
-    private final String username;
-    private final int userStatus;
-    private final List<String> courses;
+    private String userID;
+    private String firstName;
+    private String lastName;
+    private String username;
+    private int userStatus;
+    private List<String> courses;
     
     public User(String id,String first,String last,String user,int status,String courseString) {
         userID = id;
@@ -62,5 +62,14 @@ public class User {
     
     public List<String> getCourses() {
         return courses;
+    }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == null) return false;
+        if(obj == this) return true;
+        if(obj.getClass() != this.getClass()) return false;
+        User other = (User) obj;
+        return other.getUserID().equals(this.getUserID());
     }
 }
