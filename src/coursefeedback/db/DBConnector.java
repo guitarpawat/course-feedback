@@ -1,6 +1,5 @@
 package coursefeedback.db;
 
-import java.net.URL;
 import java.sql.*;
 
 /**
