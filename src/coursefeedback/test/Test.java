@@ -1,6 +1,4 @@
-package coursefeedback;
-
-import coursefeedback.db.*;
+package coursefeedback.test;
 
 /**
  *
