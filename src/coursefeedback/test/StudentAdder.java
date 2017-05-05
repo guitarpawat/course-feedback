@@ -34,7 +34,7 @@ public class StudentAdder {
                 System.out.print("Lastname : ");
                 String last = in.nextLine();
                 System.out.print("Status : ");
-                String status = in.nextLine();
+                int status = Integer.parseInt(in.nextLine());
                 System.out.println("Registered courses (comma separated) : ");
                 String courses = in.nextLine();
                 Bridge bridge = new Bridge(user,pass,first,last,status,courses);
@@ -49,7 +49,7 @@ class Bridge extends DBQuery {
     
     private DBConnector conn;
     
-    Bridge(String... args) throws SQLException, ClassNotFoundException {
+    Bridge(Object... args) throws SQLException, ClassNotFoundException {
         super.setPreparedCommand("INSERT INTO userinfo (username,hash,firstname,lastname,status,courses) VALUES (?,?,?,?,?,?)");
         super.setBindValues(Arrays.asList(args));
         conn = new DBConnector();

@@ -20,6 +20,11 @@ public class Test{
 //        DBConnector conn = new DBConnector();
 //        conn.excuteUpdate(dbc);
 //        conn.close();
+
+        int i = 3;
+        Object c = (Integer)i;
+        System.out.println(c instanceof Integer);
+        System.out.println(c instanceof Boolean);
     }
 
 }

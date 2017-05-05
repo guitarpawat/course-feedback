@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class DBQuery {
     private String command;
-    private List<String> bindValues = new ArrayList<String>();
+    private List<Object> bindValues = new ArrayList<>();
     
     protected DBQuery() {}
     
@@ -26,7 +26,7 @@ public class DBQuery {
         return command;
     }
     
-    protected void addBindValue(String value) {
+    protected void addBindValue(Object value) {
         bindValues.add(value);
     }
     
@@ -34,8 +34,8 @@ public class DBQuery {
         bindValues.clear();
     }
     
-    protected String[] getBindValues() {
-        return bindValues.toArray(new String[0]);
+    protected Object[] getBindValues() {
+        return bindValues.toArray();
     }
     
     protected void setBindValues(List values) {
