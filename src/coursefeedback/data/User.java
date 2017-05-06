@@ -14,10 +14,11 @@ public class User extends DBQuery {
     private String lastName;
     private String username;
     private int userStatus;
-    private String[] courses;
+    private String[] coursesID;
+    private int[] sections;
     
     public User(int id) throws SQLException, ClassNotFoundException {
-        super.setPreparedCommand("SELECT username,firstname,lastname,status,courses FROM userinfo WHERE id=?");
+        super.setPreparedCommand("SELECT username,firstname,lastname,status,courses,sections FROM userinfo WHERE id=?");
         super.addBindValue(id);
         ResultSet info = new DBConnector().excuteQuery(this);
         if(info.wasNull()) throw new IllegalArgumentException();
@@ -30,13 +31,16 @@ public class User extends DBQuery {
             lastName = info.getString("lastname");
             username = info.getString("username");
             userStatus = info.getInt("status");
-            courses = info.getString("courses").split(",");
+            coursesID = info.getString("courses").split(",");
+            String[] sec = info.getString("sections").split(",");
+            sections = new int[sec.length];
+            for(int i=0 ; i<sec.length ; i++) sections[i] = Integer.parseInt(sec[i]);
         }
         else throw new IllegalArgumentException();
     }
     
     public User(String user) throws SQLException, ClassNotFoundException {
-        super.setPreparedCommand("SELECT id,firstname,lastname,status,courses FROM userinfo WHERE username=?");
+        super.setPreparedCommand("SELECT id,firstname,lastname,status,courses,sections FROM userinfo WHERE username=?");
         super.addBindValue(user);
         ResultSet info = new DBConnector().excuteQuery(this);
         if(info.wasNull()) throw new IllegalArgumentException();
@@ -49,18 +53,24 @@ public class User extends DBQuery {
             lastName = info.getString("lastname");
             username = user;
             userStatus = info.getInt("status");
-            courses = info.getString("courses").split(",");
+            coursesID = info.getString("courses").split(",");
+            String[] sec = info.getString("sections").split(",");
+            sections = new int[sec.length];
+            for(int i=0 ; i<sec.length ; i++) sections[i] = Integer.parseInt(sec[i]);
         }
         else throw new IllegalArgumentException();
     }
     
-    public User(int id,String first,String last,String user,int status,String courseString) {
+    public User(int id,String first,String last,String user,int status,String courseString,String sectionString) {
         userID = id;
         firstName = first;
         lastName = last;
         username = user;
         userStatus = status;
-        courses = courseString.split(",");
+        coursesID = courseString.split(",");
+        String [] sec = sectionString.split(",");
+        sections = new int[sec.length];
+        for(int i=0 ; i<sec.length ; i++) sections[i] = Integer.parseInt(sec[i]);
     }
 
     /**
@@ -98,8 +108,8 @@ public class User extends DBQuery {
         return userStatus;
     }
     
-    public String[] getCourses() {
-        return courses;
+    public String[] getCoursesID() {
+        return coursesID;
     }
     
     @Override
@@ -109,5 +119,20 @@ public class User extends DBQuery {
         if(obj.getClass() != this.getClass()) return false;
         User other = (User) obj;
         return other.getUserID() == this.userID;
+    }
+    
+    public Course[] getCoursesObject() throws SQLException, ClassNotFoundException {
+        Course[] courseArr = new Course[coursesID.length];
+        for(int i=0 ; i<coursesID.length ; i++) {
+            courseArr[i] = new Course(coursesID[i],sections[i]);
+        }
+        return courseArr;
+    }
+
+    /**
+     * @return the sections
+     */
+    public int[] getSections() {
+        return sections;
     }
 }

@@ -22,8 +22,8 @@ public class Test{
 //        conn.excuteUpdate(dbc);
 //        conn.close();
 
-        User c = new User(1);
-        System.out.println(c.getFirstName()+" "+c.getLastName());
+        Course c = new Course("ENG101",1);
+        for(int i : c.getStudentsID()) System.out.println(i);
     }
 
 }

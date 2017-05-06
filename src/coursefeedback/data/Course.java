@@ -15,8 +15,8 @@ public class Course extends DBQuery{
     private String courseID;
     private String courseName;
     private int section;
-    private String teacher;
-    private String[] students;
+    private int teacherID;
+    private int[] studentsID;
     private String[] sentFeedback;
     
     public Course(String id,int sec) throws SQLException, ClassNotFoundException {
@@ -32,18 +32,22 @@ public class Course extends DBQuery{
             courseID = id;
             courseName = info.getString("name");
             section = sec;
-            teacher = info.getString("teacher");
-            students = info.getString("students").split(",");
+            teacherID = info.getInt("teacher");
+            String[] students = info.getString("students").split(",");
+            studentsID = new int[students.length];
+            for(int i=0 ; i<students.length ; i++) studentsID[i] = Integer.parseInt(students[i]);
             sentFeedback = info.getString("sentfeedback").split(",");
         }
         else throw new IllegalArgumentException();
     }
     
-    public Course(String id,String name,int sec,String cteacher,String studentString,String feedbackString) {
+    public Course(String id,String name,int sec,int cteacher,String studentString,String feedbackString) {
         courseID = id;
         courseName = name;
-        teacher = cteacher;
-        students = studentString.split(",");
+        teacherID = cteacher;
+        String[] students = studentString.split(",");
+        studentsID = new int[students.length];
+        for(int i=0 ; i<students.length ; i++) studentsID[i] = Integer.parseInt(students[i]);
         sentFeedback = feedbackString.split(",");
         section = sec;
     }
@@ -63,17 +67,17 @@ public class Course extends DBQuery{
     }
 
     /**
-     * @return the teacher
+     * @return the teacherID
      */
-    public String getTeacher() {
-        return teacher;
+    public int getTeacherID() {
+        return teacherID;
     }
 
     /**
-     * @return the students
+     * @return the studentsID
      */
-    public String[] getStudents() {
-        return students;
+    public int[] getStudentsID() {
+        return studentsID;
     }
 
     /**
@@ -102,5 +106,17 @@ public class Course extends DBQuery{
      */
     public int getSection() {
         return section;
+    }
+    
+    public User getTeacherObject() throws SQLException, ClassNotFoundException {
+        return new User(teacherID);
+    }
+    
+    public User[] getStudentsObject() throws SQLException, ClassNotFoundException {
+        User[] studentArr = new User[studentsID.length];
+        for(int i=0 ; i<studentsID.length ; i++) {
+            studentArr[i] = new User(studentsID[i]);
+        }
+        return studentArr;
     }
 }
