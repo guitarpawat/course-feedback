@@ -1,5 +1,8 @@
 package coursefeedback.data;
 
+import coursefeedback.db.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -7,20 +10,42 @@ import java.util.List;
  *
  * @author Pawat Nakpiphatkul
  */
-public class Course {
+public class Course extends DBQuery{
     
     private String courseID;
     private String courseName;
-    private User teacher;
-    private User[] students;
-    private User[] sentFeedback;
+    private int section;
+    private String teacher;
+    private String[] students;
+    private String[] sentFeedback;
     
-    public Course(String id,String name,User cteacher,User[] cstudents,User[] feedback) {
+    public Course(String id,int sec) throws SQLException, ClassNotFoundException {
+        super.setPreparedCommand("SELECT name,teacher,students,sentfeedback FROM courseinfo WHERE courseid=? AND section=?");
+        super.addBindValue(id);
+        super.addBindValue(sec);
+        ResultSet info = new DBConnector().excuteQuery(this);
+        if(info.wasNull()) throw new IllegalArgumentException();
+        for(int i=0 ; info.next() ; i++) {
+            if(i > 0) throw new IllegalArgumentException();
+        }
+        if(info.first()) {
+            courseID = id;
+            courseName = info.getString("name");
+            section = sec;
+            teacher = info.getString("teacher");
+            students = info.getString("students").split(",");
+            sentFeedback = info.getString("sentfeedback").split(",");
+        }
+        else throw new IllegalArgumentException();
+    }
+    
+    public Course(String id,String name,int sec,String cteacher,String studentString,String feedbackString) {
         courseID = id;
         courseName = name;
         teacher = cteacher;
-        students = cstudents;
-        sentFeedback = feedback;
+        students = studentString.split(",");
+        sentFeedback = feedbackString.split(",");
+        section = sec;
     }
 
     /**
@@ -40,27 +65,27 @@ public class Course {
     /**
      * @return the teacher
      */
-    public User getTeacher() {
+    public String getTeacher() {
         return teacher;
     }
 
     /**
      * @return the students
      */
-    public User[] getStudents() {
+    public String[] getStudents() {
         return students;
     }
 
     /**
      * @return the sentFeedback
      */
-    public User[] getSentFeedback() {
+    public String[] getSentFeedback() {
         return sentFeedback;
     }
     
     public void addSentFeedback() {
-        List<User> temp = Arrays.asList(sentFeedback);
-        sentFeedback = temp.toArray(new User[0]);
+        List<String> temp = Arrays.asList(sentFeedback);
+        sentFeedback = temp.toArray(new String[0]);
     }
     
     @Override
@@ -69,6 +94,13 @@ public class Course {
         if(obj == this) return true;
         if(obj.getClass() != this.getClass()) return false;
         Course other = (Course) obj;
-        return other.getCourseID().equals(this.getCourseID());
+        return other.getCourseID().equals(this.getCourseID()) && other.getSentFeedback().equals(this.sentFeedback) && other.getSection()==this.section;
+    }
+
+    /**
+     * @return the section
+     */
+    public int getSection() {
+        return section;
     }
 }

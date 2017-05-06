@@ -1,5 +1,8 @@
 package coursefeedback.test;
 
+import coursefeedback.data.Course;
+import coursefeedback.data.User;
+
 /**
  *
  * @author Pawat Nakpiphatkul
@@ -19,10 +22,8 @@ public class Test{
 //        conn.excuteUpdate(dbc);
 //        conn.close();
 
-        int i = 3;
-        Object c = (Integer)i;
-        System.out.println(c instanceof Integer);
-        System.out.println(c instanceof Boolean);
+        User c = new User(1);
+        System.out.println(c.getFirstName()+" "+c.getLastName());
     }
 
 }
