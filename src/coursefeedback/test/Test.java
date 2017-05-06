@@ -22,8 +22,10 @@ public class Test{
 //        conn.excuteUpdate(dbc);
 //        conn.close();
 
-        Course c = new Course("ENG101",1);
-        for(int i : c.getStudentsID()) System.out.println(i);
+//        Course c = new Course("ENG101",1);
+//        c.addSentFeedback(4);
+//        Integer[] i = c.getSentFeedback();
+//        for(int n : i) System.out.println(new User(n).getUsername());
     }
 
 }
