@@ -22,7 +22,7 @@ public class Login {
         System.out.print("Password : ");
         String pass = in.nextLine();
         LoginModel model = new LoginModel(user, pass);
-        System.out.println(model.userAuthentication());
+        System.out.println(model.verifyUser());
     }
 
 }

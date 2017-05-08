@@ -18,31 +18,31 @@ public class DBQuery {
     
     protected DBQuery() {}
     
-    protected void setPreparedCommand(String cmd) {
+    protected final void setPreparedCommand(String cmd) {
         command = cmd;
     }
     
-    protected String getPreparedCommand() {
+    protected final String getPreparedCommand() {
         return command;
     }
     
-    protected void addBindValue(Object value) {
+    protected final void addBindValue(Object value) {
         bindValues.add(value);
     }
     
-    protected void removeAllBindValue() {
+    protected final void removeAllBindValue() {
         bindValues.clear();
     }
     
-    protected Object[] getBindValues() {
+    protected final Object[] getBindValues() {
         return bindValues.toArray();
     }
     
-    protected void setBindValues(List values) {
+    protected final void setBindValues(List values) {
         bindValues = values;
     }
     
-    protected void clear() {
+    protected final void clearQuery() {
         command = "";
         bindValues.clear();
     }

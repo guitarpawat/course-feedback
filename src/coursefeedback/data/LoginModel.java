@@ -22,7 +22,7 @@ public class LoginModel extends DBQuery{
         return username;
     }
     
-    public boolean userAuthentication() throws SQLException,ClassNotFoundException {
+    public boolean verifyUser() throws SQLException,ClassNotFoundException {
         super.setPreparedCommand("SELECT hash FROM userinfo WHERE username=? ");
         super.addBindValue(username);
         ResultSet info = new DBConnector().excuteQuery(this);

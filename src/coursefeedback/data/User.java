@@ -22,7 +22,7 @@ public class User extends DBQuery {
         super.setPreparedCommand("SELECT username,firstname,lastname,status,courses,sections FROM userinfo WHERE id=?");
         super.addBindValue(id);
         ResultSet info = new DBConnector().excuteQuery(this);
-        super.clear();
+        super.clearQuery();
         if (info.wasNull()) {
             throw new IllegalArgumentException();
         }
@@ -56,7 +56,7 @@ public class User extends DBQuery {
         super.setPreparedCommand("SELECT id,firstname,lastname,status,courses,sections FROM userinfo WHERE username=?");
         super.addBindValue(user);
         ResultSet info = new DBConnector().excuteQuery(this);
-        super.clear();
+        super.clearQuery();
         if (info.wasNull()) {
             throw new IllegalArgumentException();
         }
@@ -163,7 +163,7 @@ public class User extends DBQuery {
         for (int i = 0; i < coursesID.length; i++) {
             courseArr[i] = new Course(coursesID[i], sections[i]);
         }
-        super.clear();
+        super.clearQuery();
         return courseArr;
     }
 

@@ -25,7 +25,7 @@ public class Course extends DBQuery {
         super.addBindValue(id);
         super.addBindValue(sec);
         ResultSet info = new DBConnector().excuteQuery(this);
-        super.clear();
+        super.clearQuery();
         if (info.wasNull()) {
             throw new IllegalArgumentException();
         }
@@ -138,7 +138,7 @@ public class Course extends DBQuery {
         super.addBindValue(courseID);
         super.addBindValue(section);
         new DBConnector().excuteUpdate(this);
-        super.clear();
+        super.clearQuery();
     }
 
     @Override
