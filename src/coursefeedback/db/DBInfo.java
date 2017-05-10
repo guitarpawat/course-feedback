@@ -7,8 +7,8 @@ package coursefeedback.db;
 enum DBInfo {
     
     JDBC_DRIVER("com.mysql.jdbc.Driver"),
-    DB_URL("jdbc:mysql://localhost/feedback"),
-    USERNAME("coursefeedback"),
+    DB_URL("jdbc:mysql://103.253.73.172/guitarpa_feedback"),
+    USERNAME("guitarpa_oop"),
     PASSWORD("SKAoPApm5LMMvo8N");
     
     private String info;
