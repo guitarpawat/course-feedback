@@ -19,6 +19,11 @@ public class StudentModel {
         courses = student.getCoursesObject();
     }
     
+    public StudentModel(User student) throws SQLException, ClassNotFoundException {
+        this.student = student;
+        courses = student.getCoursesObject();
+    }
+    
     public Course[] getSentFeesbackCourses() {
         List<Course> temp = new ArrayList<>();
         for(Course c : courses) {
