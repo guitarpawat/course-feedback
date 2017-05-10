@@ -5,3 +5,7 @@
 /nbproject
 /build
 /dist
+.classpath
+.project
+/.settings
+/bin
