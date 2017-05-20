@@ -30,6 +30,7 @@ public class LoginModel extends DBQuery{
         for(int i=0 ; info.next() ; i++) {
             if(i > 0) return false;
         }
+        super.clearQuery();
         if(info.first()) {
             String hash = info.getString("hash");
             return BCrypt.checkpw(password, hash);

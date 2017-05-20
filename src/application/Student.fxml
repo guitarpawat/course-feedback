@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="welcomeStudent" prefHeight="39.0" prefWidth="118.0" style="-fx-background-color: #80D15A;" text="    Welcome" textFill="WHITE" StackPane.alignment="TOP_LEFT">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameStudent" prefHeight="39.0" prefWidth="482.0" StackPane.alignment="TOP_RIGHT">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTreeTableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="361.0" prefWidth="420.0" StackPane.alignment="BOTTOM_LEFT" />
+      <JFXTreeTableView accessibleRole="TABLE_VIEW" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="361.0" prefWidth="180.0" StackPane.alignment="BOTTOM_RIGHT" />
+   </children>
+</StackPane>
