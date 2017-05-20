@@ -36,7 +36,7 @@ public class LoginController {
 		   if(model.verifyUser()) {
 			   try {
 				   	Stage primaryStage = new Stage(); 
-					Parent root = FXMLLoader.load(ClassLoader.getSystemResource("application/Main.fxml"));
+					Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Student.fxml"));
 					Scene scene = new Scene(root);
 					scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 					primaryStage.setTitle("Login");

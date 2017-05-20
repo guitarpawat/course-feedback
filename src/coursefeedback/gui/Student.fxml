@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" type="StackPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coursefeedback.gui.StudentController">
    <children>
       <Label fx:id="welcomeStudent" prefHeight="39.0" prefWidth="118.0" style="-fx-background-color: #80D15A;" text="    Welcome" textFill="WHITE" StackPane.alignment="TOP_LEFT">
          <font>
@@ -21,4 +20,4 @@
       <JFXTreeTableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="361.0" prefWidth="420.0" StackPane.alignment="BOTTOM_LEFT" />
       <JFXTreeTableView accessibleRole="TABLE_VIEW" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="361.0" prefWidth="180.0" StackPane.alignment="BOTTOM_RIGHT" />
    </children>
-</StackPane>
+</fx:root>
