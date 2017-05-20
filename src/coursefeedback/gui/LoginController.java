@@ -18,43 +18,41 @@ import coursefeedback.data.LoginModel;
 
 public class LoginController {
 	@FXML
-    private JFXTextField username;
+	private JFXTextField username;
 
-    @FXML
-    private JFXPasswordField password;
+	@FXML
+	private JFXPasswordField password;
 
-    @FXML
-    private JFXButton login;
-    
-    @FXML
-    private Label status;
-    
-   @FXML
-   public void login(ActionEvent event)throws Exception {
-	   LoginModel model = new LoginModel(username.getText(),password.getText());
-	   try {
-		   if(model.verifyUser()) {
-			   try {
-				   	Stage primaryStage = new Stage(); 
+	@FXML
+	private JFXButton login;
+
+	@FXML
+	private Label status;
+
+	@FXML
+	public void login(ActionEvent event) throws Exception {
+		LoginModel model = new LoginModel(username.getText(), password.getText());
+		try {
+			if (model.verifyUser()) {
+				try {
+					Stage primaryStage = new Stage();
 					Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Student.fxml"));
 					Scene scene = new Scene(root);
 					scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-					primaryStage.setTitle("Login");
+					primaryStage.setTitle("Feedback for student");
 					primaryStage.setScene(scene);
 					primaryStage.show();
-				} catch(Exception e) {
+					Stage loginStage = (Stage) login.getScene().getWindow();
+					loginStage.close();
+				} catch (Exception e) {
 					System.out.println(e.getMessage());
 				}
-		   }
-		   else {
-			   status.setText("Failed!");
-		   }
-	   } catch(SQLException | ClassNotFoundException e) {
-		   status.setText("ERROR : "+e.getMessage());
-	   }
-}
-
-   
+			} else {
+				status.setText("Failed!");
+			}
+		} catch (SQLException | ClassNotFoundException e) {
+			status.setText("ERROR : " + e.getMessage());
+		}
+	}
 
 }
-
