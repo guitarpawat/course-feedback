@@ -1,4 +1,4 @@
-package application;
+package coursefeedback.gui;
 	
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,11 +7,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 
-public class Main extends Application {
+public class UI extends Application {
+	
+	public UI() {}
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(ClassLoader.getSystemResource("application/Login.fxml"));
+			Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Login.fxml"));
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
@@ -21,7 +24,7 @@ public class Main extends Application {
 		}
 	}
 	
-	public static void main(String[] args) {
+	public static void run(String[] args) {
 		launch(args);
 	}
 }

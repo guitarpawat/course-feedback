@@ -1,4 +1,4 @@
-package application;
+package coursefeedback.gui;
 
 import javafx.fxml.FXML;
 import com.jfoenix.controls.JFXTreeTableView;
