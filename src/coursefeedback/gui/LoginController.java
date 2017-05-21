@@ -36,11 +36,12 @@ public class LoginController {
 			if (model.verifyUser()) {
 				try {
 					Stage primaryStage = new Stage();
-					Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Student.fxml"));
+					Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Feedback.fxml"));
 					Scene scene = new Scene(root);
 					scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 					primaryStage.setTitle("Feedback for student");
 					primaryStage.setScene(scene);
+                                        primaryStage.setResizable(false);
 					primaryStage.show();
 					Stage loginStage = (Stage) login.getScene().getWindow();
 					loginStage.close();

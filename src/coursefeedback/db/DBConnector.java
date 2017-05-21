@@ -11,9 +11,13 @@ public class DBConnector {
     private Connection connect;
     private PreparedStatement statement;
     
-    public DBConnector() throws SQLException,ClassNotFoundException {
-        Class.forName(DBInfo.JDBC_DRIVER.getInfo());
-        connect = DriverManager.getConnection(DBInfo.DB_URL.getInfo(),DBInfo.USERNAME.getInfo(),DBInfo.PASSWORD.getInfo());
+    public DBConnector() {
+        try {
+            Class.forName(DBInfo.JDBC_DRIVER.getInfo());
+            connect = DriverManager.getConnection(DBInfo.DB_URL.getInfo(),DBInfo.USERNAME.getInfo(),DBInfo.PASSWORD.getInfo());
+        } catch (SQLException|ClassNotFoundException e) {
+            System.err.println("WARNING : "+e.getMessage());
+        }
     }
     
     public int excuteUpdate(DBQuery query) throws SQLException {
