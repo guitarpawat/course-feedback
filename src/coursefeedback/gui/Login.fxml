@@ -19,22 +19,22 @@
          <children>
             <JFXTextField fx:id="username" focusColor="#acf08b" layoutX="73.0" layoutY="99.0" onAction="#login" prefHeight="32.0" prefWidth="160.0" promptText="Username" unFocusColor="#50c95c">
                <font>
-                  <Font size="14.0" />
+                  <Font name="Comic Sans MS" size="14.0" />
                </font>
             </JFXTextField>
             <JFXPasswordField fx:id="password" focusColor="#acf08b" layoutX="73.0" layoutY="141.0" onAction="#login" prefHeight="32.0" prefWidth="160.0" promptText="Password" unFocusColor="#50c95c">
                <font>
-                  <Font size="14.0" />
+                  <Font name="Comic Sans MS" size="14.0" />
                </font>
             </JFXPasswordField>
             <JFXButton fx:id="login" buttonType="RAISED" layoutX="102.0" layoutY="197.0" onAction="#login" onKeyPressed="#login" prefHeight="23.0" prefWidth="103.0" ripplerFill="WHITE" style="-fx-background-color: #50c95c;" text="Login" textFill="#c8f5cb">
                <font>
-                  <Font size="16.0" />
+                  <Font name="Comic Sans MS" size="16.0" />
                </font>
             </JFXButton>
             <Text fill="#50c95c" fontSmoothingType="LCD" layoutX="14.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME!" textAlignment="CENTER" wrappingWidth="160.00000125169754">
                <font>
-                  <Font size="26.0" />
+                  <Font name="Comic Sans MS" size="25.0" />
                </font>
             </Text>
             <Label fx:id="status" alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="293.0" prefHeight="32.0" prefWidth="316.0" textAlignment="CENTER" textFill="#f52c03" underline="true">
