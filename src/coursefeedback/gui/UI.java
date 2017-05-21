@@ -19,6 +19,7 @@ public class UI extends Application {
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Login");
+                        primaryStage.setResizable(false);
 			primaryStage.show();
 
 		} catch(Exception e) {
