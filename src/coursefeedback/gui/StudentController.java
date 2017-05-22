@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import com.jfoenix.controls.JFXButton;
+import coursefeedback.data.FeedbackModel;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.logging.Level;
@@ -167,6 +168,7 @@ public class StudentController implements Observer {
             SendPackage pack = (SendPackage) msg;
             if (pack.getMessage().equals("UPDATE STUDENT DATA")) {
                 if (pack.getObject() instanceof StudentModel) {
+                    reset();
                     model = (StudentModel) pack.getObject();
                     courses = model.getCourses();
                     Course temp;
@@ -361,7 +363,7 @@ public class StudentController implements Observer {
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);
             primaryStage.show();
-            Sender.getInstance().sent(courses[0],"OPEN COURSE FEEDBACK");
+            Sender.getInstance().send(new FeedbackModel(model.getStudent(),courses[1]),"OPEN COURSE FEEDBACK");
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
@@ -378,7 +380,7 @@ public class StudentController implements Observer {
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);
             primaryStage.show();
-            Sender.getInstance().sent(courses[1],"OPEN COURSE FEEDBACK");
+            Sender.getInstance().send(new FeedbackModel(model.getStudent(),courses[1]),"OPEN COURSE FEEDBACK");
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }

@@ -16,8 +16,8 @@ public class Sender extends Observable {
     
     private Sender() {}
     
-    public void sent(Object obj,String msg) {
-        send(new SendPackage(obj, msg));
+    public void send(Object obj,String msg) {
+        Sender.this.send(new SendPackage(obj, msg));
     }
     
     public void send(SendPackage obj) {

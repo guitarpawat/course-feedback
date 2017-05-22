@@ -161,7 +161,6 @@ public class User extends DBQuery {
     public Course[] getCoursesObject() throws SQLException, ClassNotFoundException {
         Course[] courseArr = new Course[coursesID.length];
         for (int i = 0; i < coursesID.length; i++) {
-            System.out.println(coursesID[i]+"|"+sections[i]);
             courseArr[i] = new Course(coursesID[i], sections[i]);
         }
         super.clearQuery();

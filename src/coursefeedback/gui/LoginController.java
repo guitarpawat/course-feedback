@@ -50,7 +50,7 @@ public class LoginController {
 					primaryStage.show();
 					Stage loginStage = (Stage) login.getScene().getWindow();
 					loginStage.close();
-                                        Sender.getInstance().sent(new StudentModel(student),"UPDATE STUDENT DATA");
+                                        Sender.getInstance().send(new StudentModel(student),"UPDATE STUDENT DATA");
 				} catch (Exception e) {
 					System.err.println(e.getMessage());
 				}
