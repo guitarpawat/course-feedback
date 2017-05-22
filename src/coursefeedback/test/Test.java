@@ -27,10 +27,10 @@ public class Test{
 //        c.addSentFeedback(4);
 //        Integer[] i = c.getSentFeedback();
 //        for(int n : i) System.out.println(new User(n).getUsername());
-        User user = new User("gp");
-        System.out.println(user.toString());
-        StudentModel std = new StudentModel(user);
-        System.out.println(std.toString());
+//        User user = new User("gp");
+//        System.out.println(user.toString());
+//        StudentModel std = new StudentModel(user);
+//        System.out.println(std.toString());
     }
 
 }

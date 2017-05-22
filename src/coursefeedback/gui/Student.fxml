@@ -209,52 +209,52 @@
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <JFXButton fx:id="feedStudent1" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                  <JFXButton fx:id="feedStudent1" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#send1" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="feedStudent10" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="10">
+                  <JFXButton fx:id="feedStudent10" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#sent10" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="10">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="feedStudent9" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                  <JFXButton fx:id="feedStudent9" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#sent9" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="9">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="feedStudent8" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                  <JFXButton fx:id="feedStudent8" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#send8" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="8">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="feedStudent7" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                  <JFXButton fx:id="feedStudent7" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#send7" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="7">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="feedStudent6" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                  <JFXButton fx:id="feedStudent6" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#send6" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="6">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="feedStudent5" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                  <JFXButton fx:id="feedStudent5" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#send5" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="5">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="feedStudent4" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                  <JFXButton fx:id="feedStudent4" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#send4" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="4">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="feedStudent3" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                  <JFXButton fx:id="feedStudent3" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#send3" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="3">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="feedStudent2" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                  <JFXButton fx:id="feedStudent2" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#send2" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
@@ -349,13 +349,13 @@
                   </Label>
                </children>
             </GridPane>
-            <Label fx:id="welcomeStudent" prefHeight="39.0" prefWidth="118.0" style="-fx-background-color: #80D15A;" text="    Welcome" textFill="WHITE">
+            <Label fx:id="welcomeStudent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="118.0" style="-fx-background-color: #80D15A;" text="    Welcome" textFill="WHITE">
                <font>
                   <Font name="Comic Sans MS" size="18.0" />
                </font>
             </Label>
          </children></Pane>
-      <Label fx:id="nameStudent" prefHeight="39.0" prefWidth="482.0" style="-fx-background-color: #80D15A;" StackPane.alignment="TOP_RIGHT">
+      <Label fx:id="nameStudent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="482.0" style="-fx-background-color: #80D15A;" StackPane.alignment="TOP_RIGHT">
          <font>
             <Font size="18.0" />
          </font>

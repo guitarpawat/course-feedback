@@ -3,9 +3,12 @@ package coursefeedback.gui;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXTextField;
+import coursefeedback.data.Course;
 import coursefeedback.db.DBConnector;
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.Observable;
+import java.util.Observer;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -15,7 +18,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
 
-public class FeedbackController {
+public class FeedbackController implements Observer {
     
     @FXML
     private JFXTextField feedback;
@@ -133,6 +136,7 @@ public class FeedbackController {
 
     private int[] score = new int[5];
     private String comment;
+    private Course course;
 
     public void sendFeedback(ActionEvent event) {
         Toggle ans = q1.getSelectedToggle();
@@ -225,6 +229,26 @@ public class FeedbackController {
             }
             comment = feedback.getText();
         } while (false);
+    }
+
+    @FXML
+    public void initialize() {
+        warn.setText("Loading...");
+        Sender.getInstance().addObserver(this);
+    }
+    
+    @Override
+    public void update(Observable subject, Object msg) {
+        if (msg instanceof SendPackage) {
+            SendPackage pack = (SendPackage) msg;
+            if (pack.getMessage().equals("OPEN COURSE FEEDBACK")) {
+                if(pack.getObject() instanceof Course) {
+                    course = (Course) pack.getObject();
+                    sendButton.setDisable(false);
+                    warn.setText("");
+                }                
+            }
+        }
     }
 
 }
