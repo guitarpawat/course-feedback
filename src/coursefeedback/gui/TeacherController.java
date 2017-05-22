@@ -112,35 +112,7 @@ public class TeacherController implements Observer {
     @FXML
     private Label secTeach2;
 
-    @FXML
-    private JFXButton feedTeach1;
-
-    @FXML
-    private JFXButton feedTeach10;
-
-    @FXML
-    private JFXButton feedTeach9;
-
-    @FXML
-    private JFXButton feedTeach8;
-
-    @FXML
-    private JFXButton feedTeach7;
-
-    @FXML
-    private JFXButton feedTeach6;
-
-    @FXML
-    private JFXButton feedTeach5;
-
-    @FXML
-    private JFXButton feedTeach4;
-
-    @FXML
-    private JFXButton feedTeach3;
-
-    @FXML
-    private JFXButton feedTeach2;
+    
 
     User teacher;
     Course[] courses;
