@@ -1,10 +1,16 @@
 package coursefeedback.gui;
 
 import java.awt.Label;
+import java.io.IOException;
 
 import com.jfoenix.controls.JFXButton;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class TeacherController {
 	
@@ -104,34 +110,6 @@ public class TeacherController {
     @FXML
     private Label secTeach2;
 
-    @FXML
-    private JFXButton feedTeach1;
-
-    @FXML
-    private JFXButton feedTeach10;
-
-    @FXML
-    private JFXButton feedTeach9;
-
-    @FXML
-    private JFXButton feedTeach8;
-
-    @FXML
-    private JFXButton feedTeach7;
-
-    @FXML
-    private JFXButton feedTeach6;
-
-    @FXML
-    private JFXButton feedTeach5;
-
-    @FXML
-    private JFXButton feedTeach4;
-
-    @FXML
-    private JFXButton feedTeach3;
-
-    @FXML
-    private JFXButton feedTeach2;
+    
 
 }

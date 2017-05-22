@@ -39,18 +39,18 @@ public class LoginController {
 		try {
 			if (model.verifyUser()) {
 				try {
-                                        User student = new User(model.getUsername());
+                    User student = new User(model.getUsername());
 					Stage primaryStage = new Stage();
 					Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Student.fxml"));
 					Scene scene = new Scene(root);
 					scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 					primaryStage.setTitle("Feedback for student");
 					primaryStage.setScene(scene);
-                                        primaryStage.setResizable(false);
+                    primaryStage.setResizable(false);
 					primaryStage.show();
 					Stage loginStage = (Stage) login.getScene().getWindow();
 					loginStage.close();
-                                        Sender.getInstance().send(new StudentModel(student),"UPDATE STUDENT DATA");
+                    Sender.getInstance().send(new StudentModel(student),"UPDATE STUDENT DATA");
 				} catch (Exception e) {
 					System.err.println(e.getMessage());
 				}

@@ -267,7 +267,7 @@
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <Label fx:id="secStudent1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <Label fx:id="secStudent1" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
@@ -275,7 +275,7 @@
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <Label fx:id="secStudent10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="10">
+                  <Label fx:id="secStudent10" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="10">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
@@ -283,7 +283,7 @@
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <Label fx:id="secStudent9" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                  <Label fx:id="secStudent9" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="9">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
@@ -291,7 +291,7 @@
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <Label fx:id="secStudent8" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                  <Label fx:id="secStudent8" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="8">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
@@ -299,7 +299,7 @@
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <Label fx:id="secStudent7" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                  <Label fx:id="secStudent7" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="7">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
@@ -307,7 +307,7 @@
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <Label fx:id="secStudent6" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                  <Label fx:id="secStudent6" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="6">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
@@ -315,7 +315,7 @@
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <Label fx:id="secStudent5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                  <Label fx:id="secStudent5" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="5">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
@@ -323,7 +323,7 @@
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <Label fx:id="secStudent4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                  <Label fx:id="secStudent4" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="4">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
@@ -331,7 +331,7 @@
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <Label fx:id="secStudent3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                  <Label fx:id="secStudent3" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="3">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
@@ -339,7 +339,7 @@
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <Label fx:id="secStudent2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <Label fx:id="secStudent2" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
@@ -349,16 +349,16 @@
                   </Label>
                </children>
             </GridPane>
-            <Label fx:id="welcomeStudent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="118.0" style="-fx-background-color: #80D15A;" text="    Welcome" textFill="WHITE">
+            <Label fx:id="welcomeStudent" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="118.0" style="-fx-background-color: #80D15A;" text="    Welcome" textFill="WHITE">
                <font>
                   <Font name="Comic Sans MS" size="18.0" />
                </font>
             </Label>
+            <Label fx:id="nameStudent" layoutX="118.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="482.0" style="-fx-background-color: #80D15A;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
          </children></Pane>
-      <Label fx:id="nameStudent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="482.0" style="-fx-background-color: #80D15A;" StackPane.alignment="TOP_RIGHT">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
    </children>
 </StackPane>
