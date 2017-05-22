@@ -63,7 +63,7 @@
             </Pane>
             <Pane layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: #ffffff;">
                <children>
-                  <JFXTextArea focusColor="WHITE" layoutX="8.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="45.0" prefWidth="295.0" text="   1. The tacher explains concepts/ideas in ways that I can understand" unFocusColor="WHITE">
+                  <JFXTextArea focusColor="WHITE" layoutX="8.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="45.0" prefWidth="295.0" text="   1. The teacher explains concepts/ideas in ways that I can understand" unFocusColor="WHITE">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
@@ -169,7 +169,7 @@
                         <JFXRadioButton fx:id="q20" text=" " toggleGroup="$q2" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
-                  <JFXTextArea focusColor="WHITE" layoutX="4.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="45.0" prefWidth="295.0" text="   5. I receive feedback in time to help me improve" unFocusColor="WHITE">
+                  <JFXTextArea focusColor="WHITE" layoutX="4.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="45.0" prefWidth="295.0" text="   5.  I receive feedback in time to help me improve" unFocusColor="WHITE">
                      <font>
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
