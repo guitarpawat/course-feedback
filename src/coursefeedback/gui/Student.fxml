@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -16,8 +17,9 @@
             <GridPane layoutY="40.0" prefHeight="361.0" prefWidth="607.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="116.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="389.0" minWidth="10.0" prefWidth="366.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="124.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="420.0" minWidth="10.0" prefWidth="274.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="389.0" minWidth="10.0" prefWidth="96.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="127.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -41,7 +43,7 @@
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="366.0" style="-fx-background-color: BBFC9E;" text="Course Name" GridPane.columnIndex="1">
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="272.0" style="-fx-background-color: BBFC9E;" text="Course Name" GridPane.columnIndex="1">
                      <effect>
                         <InnerShadow color="#8cd06a" />
                      </effect>
@@ -49,7 +51,7 @@
                         <Font name="Comic Sans MS Bold" size="14.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: BBFC9E;" text="Feedback" GridPane.columnIndex="2">
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="119.0" style="-fx-background-color: BBFC9E;" text="Feedback" GridPane.columnIndex="3">
                      <font>
                         <Font name="Comic Sans MS Bold" size="14.0" />
                      </font>
@@ -57,29 +59,302 @@
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <Label fx:id="id1" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="1">
+                  <Label fx:id="IDStudent1" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="1">
                      <effect>
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <Label fx:id="course1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="366.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Label fx:id="courseStudent1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="272.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <effect>
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <Label fx:id="feedback1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <Label fx:id="IDStudent10" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="10">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="IDStudent7" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="7">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="IDStudent9" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="9">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="IDStudent8" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="8">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="IDStudent6" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="6">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="IDStudent5" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="5">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="IDStudent4" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="4">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="IDStudent3" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="3">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="IDStudent2" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="2">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="courseStudent10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="272.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="courseStudent9" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="272.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="courseStudent8" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="272.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="courseStudent7" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="272.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="courseStudent6" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="272.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="courseStudent5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="272.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="courseStudent4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="272.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="courseStudent3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="272.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="courseStudent2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="272.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="119.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="119.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="119.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="3" GridPane.rowIndex="10">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="119.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="119.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="119.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="119.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="119.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="119.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="119.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <JFXButton fx:id="feedStudent1" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="feedStudent10" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="10">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="feedStudent9" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="feedStudent8" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="feedStudent7" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="feedStudent6" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="feedStudent5" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="feedStudent4" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="feedStudent3" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="feedStudent2" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="119.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: BBFC9E;" text="Section" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="secStudent1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="secStudent10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="10">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="secStudent9" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="secStudent8" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="secStudent7" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="secStudent6" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="secStudent5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="secStudent4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="secStudent3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow color="#8cd06a" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="secStudent2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Comic Sans MS" size="13.0" />
+                     </font>
                      <effect>
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
                </children>
             </GridPane>
+            <Label fx:id="welcomeStudent" prefHeight="39.0" prefWidth="118.0" style="-fx-background-color: #80D15A;" text="    Welcome" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+            </Label>
          </children></Pane>
-      <Label fx:id="welcomeStudent" prefHeight="39.0" prefWidth="118.0" style="-fx-background-color: #80D15A;" text="    Welcome" textFill="WHITE" StackPane.alignment="TOP_LEFT">
-         <font>
-            <Font name="Comic Sans MS" size="18.0" />
-         </font>
-      </Label>
       <Label fx:id="nameStudent" prefHeight="39.0" prefWidth="482.0" style="-fx-background-color: #80D15A;" StackPane.alignment="TOP_RIGHT">
          <font>
             <Font size="18.0" />
