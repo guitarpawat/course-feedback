@@ -48,7 +48,7 @@ public class LoginController {
                         Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Student.fxml"));
                         Scene scene = new Scene(root);
                         scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-                        primaryStage.setTitle("Feedback for student");
+                        primaryStage.setTitle("Feedback for Student");
                         primaryStage.setScene(scene);
                         primaryStage.setResizable(false);
                         primaryStage.show();
@@ -61,7 +61,7 @@ public class LoginController {
                         Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Teacher.fxml"));
                         Scene scene = new Scene(root);
                         scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-                        primaryStage.setTitle("Feedback for student");
+                        primaryStage.setTitle("Feedback for Teacher");
                         primaryStage.setScene(scene);
                         primaryStage.setResizable(false);
                         primaryStage.show();

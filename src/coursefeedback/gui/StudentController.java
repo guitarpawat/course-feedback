@@ -163,125 +163,127 @@ public class StudentController implements Observer {
 
     @Override
     public void update(Observable subject, Object msg) {
-        if (msg instanceof SendPackage) {
-            SendPackage pack = (SendPackage) msg;
-            if (pack.getMessage().equals("UPDATE STUDENT DATA")) {
-                if (pack.getObject() instanceof StudentModel) {
-                    reset();
-                    model = (StudentModel) pack.getObject();
-                    courses = model.getCourses();
-                    Course temp;
-                    if (courses.length > 0) {
-                        temp = courses[0];
-                        IDStudent1.setText(temp.getCourseID());
-                        courseStudent1.setText(temp.getCourseName());
-                        secStudent1.setText(Integer.toString(temp.getSection()));
-                        if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
-                            feedStudent1.setText("Send Feedback");
-                            feedStudent1.setDisable(false);
+        if (msg != null) {
+            if (msg instanceof SendPackage) {
+                SendPackage pack = (SendPackage) msg;
+                if (pack.getMessage().equals("UPDATE STUDENT DATA")) {
+                    if (pack.getObject() instanceof StudentModel) {
+                        reset();
+                        model = (StudentModel) pack.getObject();
+                        courses = model.getCourses();
+                        Course temp;
+                        if (courses.length > 0) {
+                            temp = courses[0];
+                            IDStudent1.setText(temp.getCourseID());
+                            courseStudent1.setText(temp.getCourseName());
+                            secStudent1.setText(Integer.toString(temp.getSection()));
+                            if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
+                                feedStudent1.setText("Send Feedback");
+                                feedStudent1.setDisable(false);
+                            }
+                            feedStudent1.setVisible(true);
                         }
-                        feedStudent1.setVisible(true);
-                    }
-                    if (courses.length > 1) {
-                        temp = courses[1];
-                        IDStudent2.setText(temp.getCourseID());
-                        courseStudent2.setText(temp.getCourseName());
-                        secStudent2.setText(Integer.toString(temp.getSection()));
-                        if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
-                            feedStudent2.setText("Send Feedback");
-                            feedStudent2.setDisable(false);
+                        if (courses.length > 1) {
+                            temp = courses[1];
+                            IDStudent2.setText(temp.getCourseID());
+                            courseStudent2.setText(temp.getCourseName());
+                            secStudent2.setText(Integer.toString(temp.getSection()));
+                            if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
+                                feedStudent2.setText("Send Feedback");
+                                feedStudent2.setDisable(false);
+                            }
+                            feedStudent2.setVisible(true);
                         }
-                        feedStudent2.setVisible(true);
-                    }
-                    if (courses.length > 2) {
-                        temp = courses[2];
-                        IDStudent3.setText(temp.getCourseID());
-                        courseStudent3.setText(temp.getCourseName());
-                        secStudent3.setText(Integer.toString(temp.getSection()));
-                        if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
-                            feedStudent3.setText("Send Feedback");
-                            feedStudent3.setDisable(false);
+                        if (courses.length > 2) {
+                            temp = courses[2];
+                            IDStudent3.setText(temp.getCourseID());
+                            courseStudent3.setText(temp.getCourseName());
+                            secStudent3.setText(Integer.toString(temp.getSection()));
+                            if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
+                                feedStudent3.setText("Send Feedback");
+                                feedStudent3.setDisable(false);
+                            }
+                            feedStudent3.setVisible(true);
                         }
-                        feedStudent3.setVisible(true);
-                    }
-                    if (courses.length > 3) {
-                        temp = courses[3];
-                        IDStudent4.setText(temp.getCourseID());
-                        courseStudent4.setText(temp.getCourseName());
-                        secStudent4.setText(Integer.toString(temp.getSection()));
-                        if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
-                            feedStudent4.setText("Send Feedback");
-                            feedStudent4.setDisable(false);
+                        if (courses.length > 3) {
+                            temp = courses[3];
+                            IDStudent4.setText(temp.getCourseID());
+                            courseStudent4.setText(temp.getCourseName());
+                            secStudent4.setText(Integer.toString(temp.getSection()));
+                            if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
+                                feedStudent4.setText("Send Feedback");
+                                feedStudent4.setDisable(false);
+                            }
+                            feedStudent4.setVisible(true);
                         }
-                        feedStudent4.setVisible(true);
-                    }
-                    if (courses.length > 4) {
-                        temp = courses[4];
-                        IDStudent5.setText(temp.getCourseID());
-                        courseStudent5.setText(temp.getCourseName());
-                        secStudent5.setText(Integer.toString(temp.getSection()));
-                        if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
-                            feedStudent5.setText("Send Feedback");
-                            feedStudent5.setDisable(false);
+                        if (courses.length > 4) {
+                            temp = courses[4];
+                            IDStudent5.setText(temp.getCourseID());
+                            courseStudent5.setText(temp.getCourseName());
+                            secStudent5.setText(Integer.toString(temp.getSection()));
+                            if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
+                                feedStudent5.setText("Send Feedback");
+                                feedStudent5.setDisable(false);
+                            }
+                            feedStudent5.setVisible(true);
                         }
-                        feedStudent5.setVisible(true);
-                    }
-                    if (courses.length > 5) {
-                        temp = courses[5];
-                        IDStudent6.setText(temp.getCourseID());
-                        courseStudent6.setText(temp.getCourseName());
-                        secStudent6.setText(Integer.toString(temp.getSection()));
-                        if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
-                            feedStudent6.setText("Send Feedback");
-                            feedStudent6.setDisable(false);
+                        if (courses.length > 5) {
+                            temp = courses[5];
+                            IDStudent6.setText(temp.getCourseID());
+                            courseStudent6.setText(temp.getCourseName());
+                            secStudent6.setText(Integer.toString(temp.getSection()));
+                            if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
+                                feedStudent6.setText("Send Feedback");
+                                feedStudent6.setDisable(false);
+                            }
+                            feedStudent6.setVisible(true);
                         }
-                        feedStudent6.setVisible(true);
-                    }
-                    if (courses.length > 6) {
-                        temp = courses[6];
-                        IDStudent7.setText(temp.getCourseID());
-                        courseStudent7.setText(temp.getCourseName());
-                        secStudent7.setText(Integer.toString(temp.getSection()));
-                        if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
-                            feedStudent7.setText("Send Feedback");
-                            feedStudent7.setDisable(false);
+                        if (courses.length > 6) {
+                            temp = courses[6];
+                            IDStudent7.setText(temp.getCourseID());
+                            courseStudent7.setText(temp.getCourseName());
+                            secStudent7.setText(Integer.toString(temp.getSection()));
+                            if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
+                                feedStudent7.setText("Send Feedback");
+                                feedStudent7.setDisable(false);
+                            }
+                            feedStudent7.setVisible(true);
                         }
-                        feedStudent7.setVisible(true);
-                    }
-                    if (courses.length > 7) {
-                        temp = courses[7];
-                        IDStudent8.setText(temp.getCourseID());
-                        courseStudent8.setText(temp.getCourseName());
-                        secStudent8.setText(Integer.toString(temp.getSection()));
-                        if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
-                            feedStudent8.setText("Send Feedback");
-                            feedStudent8.setDisable(false);
+                        if (courses.length > 7) {
+                            temp = courses[7];
+                            IDStudent8.setText(temp.getCourseID());
+                            courseStudent8.setText(temp.getCourseName());
+                            secStudent8.setText(Integer.toString(temp.getSection()));
+                            if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
+                                feedStudent8.setText("Send Feedback");
+                                feedStudent8.setDisable(false);
+                            }
+                            feedStudent8.setVisible(true);
                         }
-                        feedStudent8.setVisible(true);
-                    }
-                    if (courses.length > 8) {
-                        temp = courses[8];
-                        IDStudent9.setText(temp.getCourseID());
-                        courseStudent9.setText(temp.getCourseName());
-                        secStudent9.setText(Integer.toString(temp.getSection()));
-                        if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
-                            feedStudent9.setText("Send Feedback");
-                            feedStudent9.setDisable(false);
+                        if (courses.length > 8) {
+                            temp = courses[8];
+                            IDStudent9.setText(temp.getCourseID());
+                            courseStudent9.setText(temp.getCourseName());
+                            secStudent9.setText(Integer.toString(temp.getSection()));
+                            if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
+                                feedStudent9.setText("Send Feedback");
+                                feedStudent9.setDisable(false);
+                            }
+                            feedStudent9.setVisible(true);
                         }
-                        feedStudent9.setVisible(true);
-                    }
-                    if (courses.length > 9) {
-                        temp = courses[9];
-                        IDStudent10.setText(temp.getCourseID());
-                        courseStudent10.setText(temp.getCourseName());
-                        secStudent10.setText(Integer.toString(temp.getSection()));
-                        if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
-                            feedStudent10.setText("Send Feedback");
-                            feedStudent10.setDisable(false);
+                        if (courses.length > 9) {
+                            temp = courses[9];
+                            IDStudent10.setText(temp.getCourseID());
+                            courseStudent10.setText(temp.getCourseName());
+                            secStudent10.setText(Integer.toString(temp.getSection()));
+                            if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
+                                feedStudent10.setText("Send Feedback");
+                                feedStudent10.setDisable(false);
+                            }
+                            feedStudent10.setVisible(true);
                         }
-                        feedStudent10.setVisible(true);
+                        nameStudent.setText(model.getStudent().toString());
                     }
-                    nameStudent.setText(model.getStudent().toString());
                 }
             }
         }
