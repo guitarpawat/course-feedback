@@ -21,45 +21,70 @@ import coursefeedback.data.User;
 import java.util.List;
 
 public class LoginController {
-	@FXML
-	private JFXTextField username;
 
-	@FXML
-	private JFXPasswordField password;
+    @FXML
+    private JFXTextField username;
 
-	@FXML
-	private JFXButton login;
+    @FXML
+    private JFXPasswordField password;
 
-	@FXML
-	private Label status;
+    @FXML
+    private JFXButton login;
 
-	@FXML
-	public void login(ActionEvent event) throws Exception {
-		LoginModel model = new LoginModel(username.getText(), password.getText());
-		try {
-			if (model.verifyUser()) {
-				try {
-                    User student = new User(model.getUsername());
-					Stage primaryStage = new Stage();
-					Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Student.fxml"));
-					Scene scene = new Scene(root);
-					scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-					primaryStage.setTitle("Feedback for student");
-					primaryStage.setScene(scene);
-                    primaryStage.setResizable(false);
-					primaryStage.show();
-					Stage loginStage = (Stage) login.getScene().getWindow();
-					loginStage.close();
-                    Sender.getInstance().send(new StudentModel(student),"UPDATE STUDENT DATA");
-				} catch (Exception e) {
-					System.err.println(e.getMessage());
-				}
-			} else {
-				status.setText("Failed!");
-			}
-		} catch (SQLException | ClassNotFoundException e) {
-			status.setText("ERROR : " + e.getMessage());
-		}
-	}
+    @FXML
+    private Label status;
+
+    @FXML
+    public void login(ActionEvent event) throws Exception {
+        status.setText("Please wait...");
+        login.setDisable(true);
+        LoginModel model = new LoginModel(username.getText(), password.getText());
+        try {
+            if (model.verifyUser()) {
+                try {
+                    User user = new User(model.getUsername());
+                    if(user.getUserStatus() == 1) {
+                        Stage primaryStage = new Stage();
+                        Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Student.fxml"));
+                        Scene scene = new Scene(root);
+                        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+                        primaryStage.setTitle("Feedback for Student");
+                        primaryStage.setScene(scene);
+                        primaryStage.setResizable(false);
+                        primaryStage.show();
+                        Stage loginStage = (Stage) login.getScene().getWindow();
+                        loginStage.close();
+                        Sender.getInstance().send(new StudentModel(user), "UPDATE STUDENT DATA");
+                    }
+                    else if(user.getUserStatus() == 3) {
+                        Stage primaryStage = new Stage();
+                        Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Teacher.fxml"));
+                        Scene scene = new Scene(root);
+                        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+                        primaryStage.setTitle("Feedback for Teacher");
+                        primaryStage.setScene(scene);
+                        primaryStage.setResizable(false);
+                        primaryStage.show();
+                        Stage loginStage = (Stage) login.getScene().getWindow();
+                        loginStage.close();
+                        Sender.getInstance().send(user, "SET TEACHER DATA");
+                    }
+                    else {
+                        status.setText("Incorrect user status : Access Denied");
+                    }
+                } catch (Exception e) {
+                    System.err.println(e.getMessage());
+                    e.printStackTrace();
+                }
+            } else {
+                status.setText("Incorrect username and/or password");
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            status.setText("ERROR : " + e.getMessage());
+        }
+        finally {
+            login.setDisable(false);
+        }
+    }
 
 }
