@@ -279,7 +279,6 @@ public class FeedbackController extends DBQuery implements Observer {
         } while (false);
     }
 
-    @FXML
     public void initialize() {
         warn.setText("Loading...");
         Sender.getInstance().addObserver(this);

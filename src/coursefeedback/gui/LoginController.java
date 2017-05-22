@@ -36,6 +36,7 @@ public class LoginController {
 
     @FXML
     public void login(ActionEvent event) throws Exception {
+        status.setText("Please wait...");
         login.setDisable(true);
         LoginModel model = new LoginModel(username.getText(), password.getText());
         try {
@@ -66,13 +67,14 @@ public class LoginController {
                         primaryStage.show();
                         Stage loginStage = (Stage) login.getScene().getWindow();
                         loginStage.close();
-                        Sender.getInstance().send(new StudentModel(user), "UPDATE STUDENT DATA");
+                        Sender.getInstance().send(user, "SET TEACHER DATA");
                     }
                     else {
                         status.setText("Incorrect user status : Access Denied");
                     }
                 } catch (Exception e) {
                     System.err.println(e.getMessage());
+                    e.printStackTrace();
                 }
             } else {
                 status.setText("Incorrect username and/or password");

@@ -156,7 +156,6 @@ public class StudentController implements Observer {
     private Course[] courses;
     private StudentModel model;
 
-    @FXML
     public void initialize() {
         reset();
         Sender.getInstance().addObserver(this);

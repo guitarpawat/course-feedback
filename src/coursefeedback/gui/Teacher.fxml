@@ -273,52 +273,52 @@
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <JFXButton fx:id="feedTeach1" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                  <JFXButton fx:id="feedTeach1" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="View Feedback" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
                      <font>
                         <Font name="Comic Sans MS" size="12.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="feedTeach10" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="10">
+                  <JFXButton fx:id="feedTeach10" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="View Feedback" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="10">
                      <font>
                         <Font name="Comic Sans MS" size="12.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="feedTeach9" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                  <JFXButton fx:id="feedTeach9" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="View Feedback" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="9">
                      <font>
                         <Font name="Comic Sans MS" size="12.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="feedTeach8" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                  <JFXButton fx:id="feedTeach8" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="View Feedback" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="8">
                      <font>
                         <Font name="Comic Sans MS" size="12.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="feedTeach7" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                  <JFXButton fx:id="feedTeach7" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="View Feedback" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="7">
                      <font>
                         <Font name="Comic Sans MS" size="12.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="feedTeach6" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                  <JFXButton fx:id="feedTeach6" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="View Feedback" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="6">
                      <font>
                         <Font name="Comic Sans MS" size="12.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="feedTeach5" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                  <JFXButton fx:id="feedTeach5" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="View Feedback" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="5">
                      <font>
                         <Font name="Comic Sans MS" size="12.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="feedTeach4" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                  <JFXButton fx:id="feedTeach4" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="View Feedback" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="4">
                      <font>
                         <Font name="Comic Sans MS" size="12.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="feedTeach3" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                  <JFXButton fx:id="feedTeach3" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="View Feedback" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="3">
                      <font>
                         <Font name="Comic Sans MS" size="12.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="feedTeach2" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="Enter" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                  <JFXButton fx:id="feedTeach2" buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="View Feedback" visible="false" GridPane.columnIndex="3" GridPane.rowIndex="2">
                      <font>
                         <Font name="Comic Sans MS" size="12.0" />
                      </font>

@@ -1,12 +1,12 @@
 package coursefeedback.gui;
 
-import java.awt.Label;
-
 import com.jfoenix.controls.JFXButton;
-
+import java.util.Observable;
+import java.util.Observer;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 
-public class TeacherController {
+public class TeacherController implements Observer {
 
     @FXML
     private Label nameTeacher;
@@ -130,5 +130,13 @@ public class TeacherController {
 
     @FXML
     private JFXButton feedTeach2;
+
+    public void initialize() {
+        
+    }
+    
+    @Override
+    public void update(Observable subject, Object msg) {
+    }
 
 }
