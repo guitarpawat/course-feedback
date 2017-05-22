@@ -175,7 +175,7 @@ public class StudentController implements Observer {
                         if (courses.length > 0) {
                             temp = courses[0];
                             IDStudent1.setText(temp.getCourseID());
-                            courseStudent1.setText(temp.getCourseName());
+                            courseStudent1.setText(" "+temp.getCourseName());
                             secStudent1.setText(Integer.toString(temp.getSection()));
                             if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
                                 feedStudent1.setText("Send Feedback");
@@ -186,7 +186,7 @@ public class StudentController implements Observer {
                         if (courses.length > 1) {
                             temp = courses[1];
                             IDStudent2.setText(temp.getCourseID());
-                            courseStudent2.setText(temp.getCourseName());
+                            courseStudent2.setText(" "+temp.getCourseName());
                             secStudent2.setText(Integer.toString(temp.getSection()));
                             if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
                                 feedStudent2.setText("Send Feedback");
@@ -197,7 +197,7 @@ public class StudentController implements Observer {
                         if (courses.length > 2) {
                             temp = courses[2];
                             IDStudent3.setText(temp.getCourseID());
-                            courseStudent3.setText(temp.getCourseName());
+                            courseStudent3.setText(" "+temp.getCourseName());
                             secStudent3.setText(Integer.toString(temp.getSection()));
                             if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
                                 feedStudent3.setText("Send Feedback");
@@ -208,7 +208,7 @@ public class StudentController implements Observer {
                         if (courses.length > 3) {
                             temp = courses[3];
                             IDStudent4.setText(temp.getCourseID());
-                            courseStudent4.setText(temp.getCourseName());
+                            courseStudent4.setText(" "+temp.getCourseName());
                             secStudent4.setText(Integer.toString(temp.getSection()));
                             if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
                                 feedStudent4.setText("Send Feedback");
@@ -219,7 +219,7 @@ public class StudentController implements Observer {
                         if (courses.length > 4) {
                             temp = courses[4];
                             IDStudent5.setText(temp.getCourseID());
-                            courseStudent5.setText(temp.getCourseName());
+                            courseStudent5.setText(" "+temp.getCourseName());
                             secStudent5.setText(Integer.toString(temp.getSection()));
                             if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
                                 feedStudent5.setText("Send Feedback");
@@ -230,7 +230,7 @@ public class StudentController implements Observer {
                         if (courses.length > 5) {
                             temp = courses[5];
                             IDStudent6.setText(temp.getCourseID());
-                            courseStudent6.setText(temp.getCourseName());
+                            courseStudent6.setText(" "+temp.getCourseName());
                             secStudent6.setText(Integer.toString(temp.getSection()));
                             if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
                                 feedStudent6.setText("Send Feedback");
@@ -241,7 +241,7 @@ public class StudentController implements Observer {
                         if (courses.length > 6) {
                             temp = courses[6];
                             IDStudent7.setText(temp.getCourseID());
-                            courseStudent7.setText(temp.getCourseName());
+                            courseStudent7.setText(" "+temp.getCourseName());
                             secStudent7.setText(Integer.toString(temp.getSection()));
                             if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
                                 feedStudent7.setText("Send Feedback");
@@ -252,7 +252,7 @@ public class StudentController implements Observer {
                         if (courses.length > 7) {
                             temp = courses[7];
                             IDStudent8.setText(temp.getCourseID());
-                            courseStudent8.setText(temp.getCourseName());
+                            courseStudent8.setText(" "+temp.getCourseName());
                             secStudent8.setText(Integer.toString(temp.getSection()));
                             if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
                                 feedStudent8.setText("Send Feedback");
@@ -263,7 +263,7 @@ public class StudentController implements Observer {
                         if (courses.length > 8) {
                             temp = courses[8];
                             IDStudent9.setText(temp.getCourseID());
-                            courseStudent9.setText(temp.getCourseName());
+                            courseStudent9.setText(" "+temp.getCourseName());
                             secStudent9.setText(Integer.toString(temp.getSection()));
                             if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
                                 feedStudent9.setText("Send Feedback");
@@ -274,7 +274,7 @@ public class StudentController implements Observer {
                         if (courses.length > 9) {
                             temp = courses[9];
                             IDStudent10.setText(temp.getCourseID());
-                            courseStudent10.setText(temp.getCourseName());
+                            courseStudent10.setText(" "+temp.getCourseName());
                             secStudent10.setText(Integer.toString(temp.getSection()));
                             if (Arrays.asList(model.getNotSentFeedbackCourse()).contains(temp)) {
                                 feedStudent10.setText("Send Feedback");
