@@ -13,8 +13,12 @@ import java.sql.SQLException;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import coursefeedback.data.Course;
 
 import coursefeedback.data.LoginModel;
+import coursefeedback.data.StudentModel;
+import coursefeedback.data.User;
+import java.util.List;
 
 public class LoginController {
 	@FXML
@@ -35,8 +39,9 @@ public class LoginController {
 		try {
 			if (model.verifyUser()) {
 				try {
+                                        User student = new User(model.getUsername());
 					Stage primaryStage = new Stage();
-					Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Feedback.fxml"));
+					Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Student.fxml"));
 					Scene scene = new Scene(root);
 					scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 					primaryStage.setTitle("Feedback for student");
@@ -45,8 +50,9 @@ public class LoginController {
 					primaryStage.show();
 					Stage loginStage = (Stage) login.getScene().getWindow();
 					loginStage.close();
+                                        Sender.getInstance().send(new StudentModel(student),"UPDATE STUDENT DATA");
 				} catch (Exception e) {
-					System.out.println(e.getMessage());
+					System.err.println(e.getMessage());
 				}
 			} else {
 				status.setText("Failed!");

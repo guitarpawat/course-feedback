@@ -173,4 +173,9 @@ public class User extends DBQuery {
     public int[] getSections() {
         return sections;
     }
+    
+    @Override
+    public String toString() {
+        return firstName+" "+lastName;
+    }
 }

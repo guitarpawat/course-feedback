@@ -6,15 +6,25 @@ package coursefeedback.data;
  */
 public class FeedbackModel {
     
-    public FeedbackModel() {}
+    private User student;
+    private Course course;
     
-    public int[] getScores() {
-        //TODO
-        return new int[Integer.parseInt(FeedbackInfo.QUESTIONS.toString())];
+    public FeedbackModel(User s,Course c) {
+        student = s;
+        course = c;
     }
-    
-    public String getComment() {
-        //TODO
-        return "";
+
+    /**
+     * @return the student
+     */
+    public User getStudent() {
+        return student;
+    }
+
+    /**
+     * @return the course
+     */
+    public Course getCourse() {
+        return course;
     }
 }
