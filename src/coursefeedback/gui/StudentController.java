@@ -359,11 +359,11 @@ public class StudentController implements Observer {
             Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Feedback.fxml"));
             Scene scene = new Scene(root);
             scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            primaryStage.setTitle("Course "+courses[0].getCourseID()+" : "+courses[0].getCourseName()+" - Feedback");
+            primaryStage.setTitle("Course " + courses[0].getCourseID() + " : " + courses[0].getCourseName() + " - Feedback");
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);
             primaryStage.show();
-            Sender.getInstance().send(new FeedbackModel(model.getStudent(),courses[1]),"OPEN COURSE FEEDBACK");
+            Sender.getInstance().send(new FeedbackModel(model.getStudent(), courses[0]), "OPEN COURSE FEEDBACK");
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
@@ -376,11 +376,11 @@ public class StudentController implements Observer {
             Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Feedback.fxml"));
             Scene scene = new Scene(root);
             scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            primaryStage.setTitle("Course "+courses[1].getCourseID()+" : "+courses[1].getCourseName()+" - Feedback");
+            primaryStage.setTitle("Course " + courses[1].getCourseID() + " : " + courses[1].getCourseName() + " - Feedback");
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);
             primaryStage.show();
-            Sender.getInstance().send(new FeedbackModel(model.getStudent(),courses[1]),"OPEN COURSE FEEDBACK");
+            Sender.getInstance().send(new FeedbackModel(model.getStudent(), courses[1]), "OPEN COURSE FEEDBACK");
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
@@ -388,42 +388,138 @@ public class StudentController implements Observer {
 
     @FXML
     void send3(ActionEvent event) {
-
+        try {
+            Stage primaryStage = new Stage();
+            Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Feedback.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+            primaryStage.setTitle("Course " + courses[2].getCourseID() + " : " + courses[2].getCourseName() + " - Feedback");
+            primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
+            primaryStage.show();
+            Sender.getInstance().send(new FeedbackModel(model.getStudent(), courses[2]), "OPEN COURSE FEEDBACK");
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
     }
 
     @FXML
     void send4(ActionEvent event) {
-
+        try {
+            Stage primaryStage = new Stage();
+            Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Feedback.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+            primaryStage.setTitle("Course " + courses[3].getCourseID() + " : " + courses[3].getCourseName() + " - Feedback");
+            primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
+            primaryStage.show();
+            Sender.getInstance().send(new FeedbackModel(model.getStudent(), courses[3]), "OPEN COURSE FEEDBACK");
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
     }
 
     @FXML
     void send5(ActionEvent event) {
-
+        try {
+            Stage primaryStage = new Stage();
+            Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Feedback.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+            primaryStage.setTitle("Course " + courses[4].getCourseID() + " : " + courses[4].getCourseName() + " - Feedback");
+            primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
+            primaryStage.show();
+            Sender.getInstance().send(new FeedbackModel(model.getStudent(), courses[4]), "OPEN COURSE FEEDBACK");
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
     }
 
     @FXML
     void send6(ActionEvent event) {
-
+        try {
+            Stage primaryStage = new Stage();
+            Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Feedback.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+            primaryStage.setTitle("Course " + courses[5].getCourseID() + " : " + courses[5].getCourseName() + " - Feedback");
+            primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
+            primaryStage.show();
+            Sender.getInstance().send(new FeedbackModel(model.getStudent(), courses[5]), "OPEN COURSE FEEDBACK");
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
     }
 
     @FXML
     void send7(ActionEvent event) {
-
+        try {
+            Stage primaryStage = new Stage();
+            Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Feedback.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+            primaryStage.setTitle("Course " + courses[6].getCourseID() + " : " + courses[6].getCourseName() + " - Feedback");
+            primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
+            primaryStage.show();
+            Sender.getInstance().send(new FeedbackModel(model.getStudent(), courses[6]), "OPEN COURSE FEEDBACK");
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
     }
 
     @FXML
     void send8(ActionEvent event) {
-
+        try {
+            Stage primaryStage = new Stage();
+            Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Feedback.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+            primaryStage.setTitle("Course " + courses[7].getCourseID() + " : " + courses[7].getCourseName() + " - Feedback");
+            primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
+            primaryStage.show();
+            Sender.getInstance().send(new FeedbackModel(model.getStudent(), courses[7]), "OPEN COURSE FEEDBACK");
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
     }
 
     @FXML
     void sent9(ActionEvent event) {
-
+        try {
+            Stage primaryStage = new Stage();
+            Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Feedback.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+            primaryStage.setTitle("Course " + courses[8].getCourseID() + " : " + courses[8].getCourseName() + " - Feedback");
+            primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
+            primaryStage.show();
+            Sender.getInstance().send(new FeedbackModel(model.getStudent(), courses[8]), "OPEN COURSE FEEDBACK");
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
     }
 
     @FXML
     void sent10(ActionEvent event) {
-
+        try {
+            Stage primaryStage = new Stage();
+            Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Feedback.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+            primaryStage.setTitle("Course " + courses[9].getCourseID() + " : " + courses[9].getCourseName() + " - Feedback");
+            primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
+            primaryStage.show();
+            Sender.getInstance().send(new FeedbackModel(model.getStudent(), courses[9]), "OPEN COURSE FEEDBACK");
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
     }
 
 }

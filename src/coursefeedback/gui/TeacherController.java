@@ -7,9 +7,6 @@ import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 
 public class TeacherController {
-	
-	@FXML
-    private Label welcomTeacher;
 
     @FXML
     private Label nameTeacher;

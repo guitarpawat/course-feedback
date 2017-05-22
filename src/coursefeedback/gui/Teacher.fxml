@@ -14,7 +14,7 @@
    <children>
       <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
          <children>
-            <Label fx:id="welcomTeacher" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="118.0" style="-fx-background-color: #80D15A;" text="Welcome" textAlignment="CENTER" textFill="WHITE">
+            <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="118.0" style="-fx-background-color: #80D15A;" text="Welcome" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Comic Sans MS" size="18.0" />
                </font>
