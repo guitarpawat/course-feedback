@@ -2,8 +2,8 @@
 ***Object Oriented Programming II Course Project***
 
 ## Members
-1. Pawat Nakpiphatkul (@guitarpawat)
-1. Noppawan Kulchol (@Septima777)
+1. Pawat Nakpiphatkul ( @guitarpawat )
+1. Noppawan Kulchol ( @Septima777 )
 
 ## About the Program
 *`TODO`*
