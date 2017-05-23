@@ -11,32 +11,34 @@ import java.util.List;
  *
  * @author Pawat Nakpiphatkul
  */
-public class ResultList extends DBQuery {
+public class ResultModel extends DBQuery {
     
     private ResultSet result;
     private Course course;
+    private int rows;
     
-    private final int QUESTIONS;
+    private final int QUESTIONS = 5;
     
-    public ResultList(Course course) throws SQLException, ClassNotFoundException {
+    public ResultModel(Course course) throws SQLException, ClassNotFoundException {
         this.course = course;
-        QUESTIONS = Integer.parseInt(FeedbackInfo.QUESTIONS.toString());
         execute();
     }
     
     private void execute() throws SQLException, ClassNotFoundException {
-        String command = "SELECT ";
-        for(int i=1 ; i<=QUESTIONS ;i++) command = command+"q"+i+",";
-        super.setPreparedCommand(command+"comment FROM feedback WHERE courseid=? AND section=?");
+        super.setPreparedCommand("SELECT q1,q2,q3,q4,q5,comment FROM feedback WHERE courseid=? AND section=?");
         super.addBindValue(course.getCourseID());
         super.addBindValue(course.getSection());
         DBConnector connect = new DBConnector();
-        connect.excuteQuery(this);
+        result = connect.excuteQuery(this);
+        super.clearQuery();
     }
     
     public int[][] getRawScore() throws SQLException {
-        int[][] scores = new int[QUESTIONS][11];
+        int[][] scores = new int[QUESTIONS][6];
+        result.beforeFirst();
+        rows = 0;
         while(result.next()) {
+            rows++;
             for(int i=0 ; i<QUESTIONS ; i++) {
                 scores[i][result.getInt("q"+(i+1))]++;
             }
@@ -47,19 +49,25 @@ public class ResultList extends DBQuery {
     public double[] getAvgScore() throws SQLException {
         int[][] scores = getRawScore();
         double[] avg = new double[QUESTIONS];
-        for(int i=0 ; i< QUESTIONS ; i++) {
+        for(int i=0 ; i<scores.length ; i++) {
             for(int j=0 ; j<scores[i].length ; j++) {
-                avg[i] += scores[i][j];
+                avg[i] = avg[i] + scores[i][j]*(double)j;
             }
-            avg[i] = avg[i]/scores[i].length;
+            if(rows == 0) avg[i] = 0;
+            else avg[i] = avg[i]/rows;
         }
         return avg;
     }
     
     public List<String> getComments() throws SQLException {
         List<String> comments = new ArrayList<>();
+        result.beforeFirst();
+        rows = 0;
         while(result.next()) {
-            comments.add(result.getString("comment"));
+            rows++;
+            if(! result.getString("comment").isEmpty()) {
+                comments.add(result.getString("comment"));
+            }
         }
         return comments;
     }
