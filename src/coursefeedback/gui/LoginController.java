@@ -7,18 +7,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import java.awt.event.KeyEvent;
 import java.sql.SQLException;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import coursefeedback.data.Course;
 
 import coursefeedback.data.LoginModel;
 import coursefeedback.data.StudentModel;
 import coursefeedback.data.User;
-import java.util.List;
 
 public class LoginController {
 
@@ -43,7 +40,7 @@ public class LoginController {
             if (model.verifyUser()) {
                 try {
                     User user = new User(model.getUsername());
-                    if(user.getUserStatus() == 1) {
+                    if (user.getUserStatus() == 1) {
                         Stage primaryStage = new Stage();
                         Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Student.fxml"));
                         Scene scene = new Scene(root);
@@ -55,8 +52,7 @@ public class LoginController {
                         Stage loginStage = (Stage) login.getScene().getWindow();
                         loginStage.close();
                         Sender.getInstance().send(new StudentModel(user), "UPDATE STUDENT DATA");
-                    }
-                    else if(user.getUserStatus() == 3) {
+                    } else if (user.getUserStatus() == 3) {
                         Stage primaryStage = new Stage();
                         Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Teacher.fxml"));
                         Scene scene = new Scene(root);
@@ -68,8 +64,7 @@ public class LoginController {
                         Stage loginStage = (Stage) login.getScene().getWindow();
                         loginStage.close();
                         Sender.getInstance().send(user, "SET TEACHER DATA");
-                    }
-                    else {
+                    } else {
                         status.setText("Incorrect user status : Access Denied");
                     }
                 } catch (Exception e) {
@@ -81,8 +76,7 @@ public class LoginController {
             }
         } catch (SQLException | ClassNotFoundException e) {
             status.setText("ERROR : " + e.getMessage());
-        }
-        finally {
+        } finally {
             login.setDisable(false);
         }
     }

@@ -5,11 +5,11 @@ package coursefeedback.data;
  * @author Pawat Nakpiphatkul
  */
 public class FeedbackModel {
-    
+
     private User student;
     private Course course;
-    
-    public FeedbackModel(User s,Course c) {
+
+    public FeedbackModel(User s, Course c) {
         student = s;
         course = c;
     }
