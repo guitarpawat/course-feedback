@@ -65,11 +65,11 @@ public static void main(String[] args) {
 }
 ```
 
-##### Also see
-http://www.mindrot.org/projects/jBCrypt/
-https://crackstation.net/hashing-security.htm
-https://en.wikipedia.org/wiki/Cryptographic_hash_function
-https://en.wikipedia.org/wiki/Salt_(cryptography)
+##### Also See
+* http://www.mindrot.org/projects/jBCrypt/
+* https://crackstation.net/hashing-security.htm
+* https://en.wikipedia.org/wiki/Cryptographic_hash_function
+* https://en.wikipedia.org/wiki/Salt_(cryptography)
 
 
 #### Database Connection
@@ -165,7 +165,7 @@ stmt.execute();
 The bind values will replace some special character like `'` and `"` with escape character like `\'` and `\"`. This solution is very popular in many languages like Java and PHP.
 
 ##### Also See
-https://www.w3schools.com/sql/default.asp
-https://www.tutorialspoint.com/jdbc/jdbc-create-database.htm
-https://en.wikipedia.org/wiki/SQL_injection
-http://php.net/manual/en/security.database.sql-injection.php
+* https://www.w3schools.com/sql/default.asp
+* https://www.tutorialspoint.com/jdbc/jdbc-create-database.htm
+* https://en.wikipedia.org/wiki/SQL_injection
+* http://php.net/manual/en/security.database.sql-injection.php
