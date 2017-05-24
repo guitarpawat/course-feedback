@@ -169,3 +169,101 @@ The bind values will replace some special character like `'` and `"` with escape
 * https://www.tutorialspoint.com/jdbc/jdbc-create-database.htm
 * https://en.wikipedia.org/wiki/SQL_injection
 * http://php.net/manual/en/security.database.sql-injection.php
+
+#### Creation of user interface
+We use JavaFX, it is a set of graphics and media packages that enables developers to design, create, test, debug, and deploy rich client applications that operate consistently across diverse platforms. With JavaFX, you can build many types of applications. Typically, they are network-aware applications that are deployed across multiple platforms and display information in a high-performance modern user interface that features audio, video, graphics, and animation.
+Next is the code example for start the program's window.
+Try this :
+```java
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+
+public class LoginController extends Application {
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) {
+            Stage primaryStage = new Stage();
+            Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Student.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+            primaryStage.setTitle("Feedback for Student");
+            primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
+            primaryStage.show();
+            Stage loginStage = (Stage) login.getScene().getWindow();
+            loginStage.close();
+            Sender.getInstance().send(new StudentModel(user), "UPDATE STUDENT DATA");
+
+       }
+    }
+}
+```
+
+#### Decoration of user interface
+Beside JavaFX, "jfoenix" is an open source Java library, that implements Google Material Design using Java components.
+
+##### Inline-style:
+![alt text](https://camo.githubusercontent.com/63c06acda6da12b96a077f879dec3570469e809b/687474703a2f2f6a666f656e69782e636f6d2f6769662f627574746f6e2e676966)
+
+From above, to show decoration of button from jfoenix. For button there are 2 styles, Flat and Raised. Following the picture. (You can do it on scene builder)
+
+
+#### Add Code to Handle an Event
+Now make the Text control display a message when the user presses the button. You do this in the FXMLExampleController.java file. Delete the code that Eclipse IDE generated and replace it with the code example is the code below.
+The @FXML annotation is used to tag nonpublic controller member fields and handler methods for use by FXML markup. The handleSubmtButtonAction method sets the actiontarget variable to Sign in button pressed when the user presses the button.
+Try this :
+```java
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.text.Text;
+
+public class FXMLExampleController {
+    @FXML private Text actiontarget;
+
+    @FXML protected void handleSubmitButtonAction(ActionEvent event) {
+        actiontarget.setText("Sign in button pressed");
+    }
+
+}
+```
+
+#### Style the Application with CSS
+The final task is to make the application look attractive by adding a Cascading Style Sheet (CSS).
+ Try this :
+ For link with style sheets on GridPane layout.
+```xml
+ <stylesheets>
+   <URL value="@Login.css" />
+ </stylesheets>
+
+</GridPane>
+```
+
+For create GridPane
+```xml
+<GridPane fx:controller="fxmlexample.FXMLExampleController"
+    xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
+    styleClass="root">
+```
+
+For create text ID
+```xml
+<Text id="welcome-text" text="Welcome"
+        GridPane.columnIndex="0" GridPane.rowIndex="0"
+        GridPane.columnSpan="2"/>
+```
+
+#### Scene Builder
+SceneBuilder is an application where you can drag and drop JavaFX UI components, and then tell your JavaFX program to use the fxml file(s) to display the user interface.
+So, it is so easy to use and to spend less time for user interface.
+![alt text](https://i.stack.imgur.com/kqFHf.png)
+
+#### Also see :
+* http://docs.oracle.com/javafx/2/overview/jfxpub-overview.htm
+* http://docs.oracle.com/javafx/2/get_started/fxml_tutorial.htm#CHDCCHII
+* https://github.com/jfoenixadmin/JFoenix/blob/master/README.md
