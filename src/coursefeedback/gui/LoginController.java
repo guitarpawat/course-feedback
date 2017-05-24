@@ -7,18 +7,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import java.awt.event.KeyEvent;
 import java.sql.SQLException;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import coursefeedback.data.Course;
 
 import coursefeedback.data.LoginModel;
 import coursefeedback.data.StudentModel;
 import coursefeedback.data.User;
-import java.util.List;
 
 /**
  * Controller for Login with user interface.
@@ -97,5 +94,4 @@ public class LoginController {
 			login.setDisable(false);
 		}
 	}
-
 }

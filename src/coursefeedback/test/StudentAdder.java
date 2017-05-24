@@ -7,7 +7,7 @@ import java.util.Scanner;
 import org.mindrot.jbcrypt.BCrypt;
 
 /**
- *
+ * Class for adding dummy user.
  * @author Pawat Nakpiphatkul
  * @version 1.0
  * @since May 5, 2017
@@ -37,7 +37,7 @@ public class StudentAdder {
                 int status = Integer.parseInt(in.nextLine());
                 System.out.println("Registered courses (comma separated) : ");
                 String courses = in.nextLine();
-                Bridge bridge = new Bridge(user,pass,first,last,status,courses);
+                AddStudent bridge = new AddStudent(user,pass,first,last,status,courses);
                 bridge.execute();
                 bridge.close();
             }
@@ -45,11 +45,11 @@ public class StudentAdder {
     }
 }
 
-class Bridge extends DBQuery {
+class AddStudent extends DBQuery {
     
     private DBConnector conn;
     
-    Bridge(Object... args) throws SQLException, ClassNotFoundException {
+    AddStudent(Object... args) {
         super.setPreparedCommand("INSERT INTO userinfo (username,hash,firstname,lastname,status,courses) VALUES (?,?,?,?,?,?)");
         super.setBindValues(Arrays.asList(args));
         conn = new DBConnector();

@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- *
+ * Class for course object.
  * @author Pawat Nakpiphatkul
  */
 public class Course extends DBQuery {
@@ -20,6 +20,13 @@ public class Course extends DBQuery {
     private Integer[] studentsID;
     private Integer[] sentFeedback;
 
+    /**
+     * Constructor for initialize Course.
+     * @param id is a course id.
+     * @param sec is a course section.
+     * @throws SQLException if there is a SQL connection problem.
+     * @throws ClassNotFoundException if SQL driver is not found.
+     */
     public Course(String id, int sec) throws SQLException, ClassNotFoundException {
         super.setPreparedCommand("SELECT name,teacher,students,sentfeedback FROM courseinfo WHERE courseid=? AND section=?");
         super.addBindValue(id);
@@ -62,66 +69,52 @@ public class Course extends DBQuery {
         }
     }
 
-    public Course(String id, String name, int sec, int cteacher, String studentString, String feedbackString) {
-        courseID = id;
-        courseName = name;
-        teacherID = cteacher;
-        String[] students = studentString.split(",");
-        studentsID = new Integer[students.length];
-        try {
-            for (int i = 0; i < students.length; i++) {
-                studentsID[i] = Integer.parseInt(students[i]);
-            }
-        } catch (NumberFormatException e) {
-            studentsID = new Integer[0];
-        }
-        String[] sent = feedbackString.split(",");
-        sentFeedback = new Integer[sent.length];
-        try {
-            for (int i = 0; i < sent.length; i++) {
-                sentFeedback[i] = Integer.parseInt(sent[i]);
-            }
-        } catch (NumberFormatException e) {
-            sentFeedback = new Integer[0];
-        }
-        section = sec;
-    }
-
     /**
-     * @return the courseID
+     * Get the course id.
+     * @return the courseID.
      */
     public String getCourseID() {
         return courseID;
     }
 
     /**
-     * @return the courseName
+     * Get the course name.
+     * @return the courseName.
      */
     public String getCourseName() {
         return courseName;
     }
 
     /**
-     * @return the teacherID
+     * get the teacher id.
+     * @return the teacherID.
      */
     public int getTeacherID() {
         return teacherID;
     }
 
     /**
-     * @return the studentsID
+     * Get the array of all student id.
+     * @return the studentsID.
      */
     public Integer[] getStudentsID() {
         return studentsID;
     }
 
     /**
-     * @return the sentFeedback
+     * Get the array of student who sent feedback.
+     * @return the sentFeedback.
      */
     public Integer[] getSentFeedback() {
         return sentFeedback;
     }
 
+    /**
+     * Add a student who sent feedback.
+     * @param id is an id of student.
+     * @throws SQLException if there is a SQL connection problem.
+     * @throws ClassNotFoundException if SQL driver is not found.
+     */
     public void addSentFeedback(Integer id) throws SQLException, ClassNotFoundException {
         List<Integer> temp = new ArrayList(Arrays.asList(sentFeedback));
         temp.add(id);
@@ -141,6 +134,9 @@ public class Course extends DBQuery {
         super.clearQuery();
     }
 
+    /**
+     * @see java.lang.Object#equals(java.lang.Object) 
+     */
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -157,16 +153,29 @@ public class Course extends DBQuery {
     }
 
     /**
-     * @return the section
+     * Get the course section.
+     * @return the section.
      */
     public int getSection() {
         return section;
     }
 
+    /**
+     * Get an object of teacher in this course.
+     * @return object of teacher.
+     * @throws SQLException if there is a SQL connection problem.
+     * @throws ClassNotFoundException if SQL driver is not found.
+     */
     public User getTeacherObject() throws SQLException, ClassNotFoundException {
         return new User(teacherID);
     }
 
+    /**
+     * Get an array of object of students in this course.
+     * @return array of student object.
+     * @throws SQLException if there is a SQL connection problem.
+     * @throws ClassNotFoundException if SQL driver is not found.
+     */
     public User[] getStudentsObject() throws SQLException, ClassNotFoundException {
         User[] studentArr = new User[studentsID.length];
         for (int i = 0; i < studentsID.length; i++) {

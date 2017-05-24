@@ -2,8 +2,9 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coursefeedback.gui.ResultController">
    <children>
       <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
          <children>
@@ -52,12 +53,12 @@
                         <Font name="Comic Sans MS Bold" size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="score1" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="1">
+                  <Label fx:id="score1" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: #ffffff;" text="N/A" GridPane.rowIndex="1">
                      <effect>
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <Label fx:id="score2" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="2">
+                  <Label fx:id="score2" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: #ffffff;" text="N/A" GridPane.rowIndex="2">
                      <effect>
                         <InnerShadow color="#8cd06a" />
                      </effect>
@@ -70,17 +71,17 @@
                         <Font name="Comic Sans MS Bold" size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="score5" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="5">
+                  <Label fx:id="score5" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: #ffffff;" text="N/A" GridPane.rowIndex="5">
                      <effect>
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <Label fx:id="score4" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="4">
+                  <Label fx:id="score4" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: #ffffff;" text="N/A" GridPane.rowIndex="4">
                      <effect>
                         <InnerShadow color="#8cd06a" />
                      </effect>
                   </Label>
-                  <Label fx:id="score3" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="3">
+                  <Label fx:id="score3" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: #ffffff;" text="N/A" GridPane.rowIndex="3">
                      <effect>
                         <InnerShadow color="#8cd06a" />
                      </effect>
@@ -93,7 +94,7 @@
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
                   </Label>
-                  <Label fx:id="comment" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" prefWidth="535.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                  <Label fx:id="comment" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" prefWidth="535.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.rowIndex="6">
                      <effect>
                         <InnerShadow color="#8cd06a" />
                      </effect>
@@ -130,24 +131,23 @@
                         <Font name="Comic Sans MS" size="13.0" />
                      </font>
                   </Label>
-                  <ScrollBar fx:id="scrolllBar" maxHeight="-Infinity" minHeight="-Infinity" orientation="VERTICAL" prefHeight="151.0" prefWidth="16.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS" />
-                  <JFXButton fx:id="preComment" alignment="CENTER" buttonType="RAISED" prefHeight="31.0" prefWidth="30.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="&lt;" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+                  <JFXButton fx:id="preComment" alignment="CENTER" buttonType="RAISED" onAction="#backComment" prefHeight="31.0" prefWidth="30.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="&lt;" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
                      <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="nextComment" alignment="CENTER" buttonType="RAISED" prefHeight="31.0" prefWidth="30.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="&gt;" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+                  <JFXButton fx:id="nextComment" alignment="CENTER" buttonType="RAISED" onAction="#nextComment" prefHeight="31.0" prefWidth="30.0" ripplerFill="WHITE" style="-fx-background-color: #80D15A;" text="&gt;" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
                      <font>
                         <Font name="Comic Sans MS Bold" size="15.0" />
                      </font>
                   </JFXButton>
+                  <ScrollPane fx:id="scrolllBar" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                    </content>
+                  </ScrollPane>
                </children>
             </GridPane>
-            <JFXButton fx:id="backToTeach" alignment="CENTER" buttonType="RAISED" layoutX="566.0" layoutY="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#back" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" style="-fx-background-color: #ff1a1a;" text="&lt;">
-               <font>
-                  <Font name="Comic Sans MS Bold" size="15.0" />
-               </font>
-            </JFXButton>
          </children>
       </Pane>
    </children>
