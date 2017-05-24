@@ -42,8 +42,7 @@ public class LoginController {
 	 * The method for login in the application. There are students and teacher
 	 * that only can login to Feedback by verify user and password.
 	 * 
-	 * @param event
-	 * @throws Exception
+	 * @param event is an action event.
 	 */
 	@FXML
 	public void login(ActionEvent event) throws Exception {

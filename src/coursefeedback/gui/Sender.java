@@ -3,7 +3,6 @@ package coursefeedback.gui;
 import java.util.Observable;
 
 /**
- * 
  * Class for sending object to another class.
  * @author Noppawan Kulchol
  * @author Pawat Nakpiphatkul

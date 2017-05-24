@@ -2,6 +2,7 @@ package coursefeedback.gui;
 
 /**
  * Class for pack to sent by Sender.
+ * @author Noppawan Kulchol
  * @author Pawat Nakpiphatkul
  */
 public class SendPackage {
