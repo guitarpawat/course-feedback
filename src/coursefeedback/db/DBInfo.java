@@ -1,7 +1,7 @@
 package coursefeedback.db;
 
 /**
- *
+ * Information required for connecting to the database.
  * @author Pawat Nakpiphatkul
  */
 enum DBInfo {

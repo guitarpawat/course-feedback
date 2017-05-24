@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 /**
- *
+ * Class for checking that login is working properly.
  * @author Pawat Nakpiphatkul
  * @version 1.0
  * @since May 5, 2017

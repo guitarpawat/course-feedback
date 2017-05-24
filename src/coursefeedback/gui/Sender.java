@@ -3,7 +3,7 @@ package coursefeedback.gui;
 import java.util.Observable;
 
 /**
- *
+ * Class for sending object to another class.
  * @author Pawat Nakpiphatkul
  */
 public class Sender extends Observable {
@@ -13,10 +13,19 @@ public class Sender extends Observable {
     private Sender() {
     }
 
+    /**
+     * Sent a package by notifying observer.
+     * @param obj is an object to send.
+     * @param msg is an message to send.
+     */
     public void send(Object obj, String msg) {
         Sender.this.send(new SendPackage(obj, msg));
     }
 
+    /**
+     * Sent a package by notifying observer.
+     * @param obj is an sent package.
+     */
     public void send(SendPackage obj) {
         try {
             Thread.sleep(320L);
@@ -27,29 +36,14 @@ public class Sender extends Observable {
         }
     }
 
+    /**
+     * Get the instance of this class.
+     * @return the instance.
+     */
     public static Sender getInstance() {
         if (instance == null) {
             instance = new Sender();
         }
         return instance;
-    }
-}
-
-class SendPackage {
-
-    private String message;
-    private Object object;
-
-    public SendPackage(Object obj, String msg) {
-        message = msg;
-        object = obj;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public Object getObject() {
-        return object;
     }
 }

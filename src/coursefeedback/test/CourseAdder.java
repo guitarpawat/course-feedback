@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- *
+ * Class for adding dummy course.
  * @author Pawat Nakpiphatkul
  * @version 1.0
  * @since May 23, 2017

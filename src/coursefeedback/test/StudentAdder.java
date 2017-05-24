@@ -7,7 +7,7 @@ import java.util.Scanner;
 import org.mindrot.jbcrypt.BCrypt;
 
 /**
- *
+ * Class for adding dummy user.
  * @author Pawat Nakpiphatkul
  * @version 1.0
  * @since May 5, 2017
