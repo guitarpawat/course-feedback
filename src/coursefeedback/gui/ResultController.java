@@ -51,10 +51,6 @@ public class ResultController implements Observer {
     @FXML
     private JFXButton nextComment;
 
-    /**
-     * @see java.util.Observer#update(Observable, Object)
-     */
-    @Override
     private ResultModel model;
     private double[] averageScores;
     private List<String> comments;
@@ -68,6 +64,10 @@ public class ResultController implements Observer {
         scrolllBar.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
     }
 
+    /**
+     * @see java.util.Observer#update(Observable, Object)
+     */
+    @Override
     public void update(Observable subject, Object msg) {
         if (msg != null) {
             if (msg instanceof SendPackage) {

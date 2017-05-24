@@ -4,9 +4,8 @@ import java.util.Observable;
 
 /**
  * 
- * 
- * @author Noppawan Kulchol
  * Class for sending object to another class.
+ * @author Noppawan Kulchol
  * @author Pawat Nakpiphatkul
  */
 public class Sender extends Observable {

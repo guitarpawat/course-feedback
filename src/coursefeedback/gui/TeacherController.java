@@ -264,7 +264,7 @@ public class TeacherController implements Observer {
 
     /**
      * Showing the average scores in each questions from students for first subject
-     * @param event
+     * @param event is action event
      */
     @FXML
     void view1(ActionEvent event) {
@@ -283,6 +283,10 @@ public class TeacherController implements Observer {
         }
     }
 
+    /**
+     * Showing the average scores in each questions from students for second subject
+     * @param event is action event
+     */
     @FXML
     void view2(ActionEvent event) {
         try {
@@ -300,6 +304,10 @@ public class TeacherController implements Observer {
         }
     }
 
+    /**
+     * Showing the average scores in each questions from students for third subject
+     * @param event is action event
+     */
     @FXML
     void view3(ActionEvent event) {
         try {
@@ -317,6 +325,10 @@ public class TeacherController implements Observer {
         }
     }
 
+    /**
+     * Showing the average scores in each questions from students for forth subject
+     * @param event is action event.
+     */
     @FXML
     void view4(ActionEvent event) {
         try {
@@ -334,6 +346,10 @@ public class TeacherController implements Observer {
         }
     }
 
+    /**
+     * Showing the average scores in each questions from students for fifth subject
+     * @param event is action event.
+     */
     @FXML
     void view5(ActionEvent event) {
         try {
@@ -351,6 +367,10 @@ public class TeacherController implements Observer {
         }
     }
 
+    /**
+     * Showing the average scores in each questions from students for sixth subject
+     * @param event is action event.
+     */
     @FXML
     void view6(ActionEvent event) {
         try {
@@ -368,6 +388,10 @@ public class TeacherController implements Observer {
         }
     }
 
+    /**
+     * Showing the average scores in each questions from students for seventh subject
+     * @param event is action event.
+     */
     @FXML
     void view7(ActionEvent event) {
         try {
@@ -385,6 +409,10 @@ public class TeacherController implements Observer {
         }
     }
 
+    /**
+     * Showing the average scores in each questions from students for eighth subject
+     * @param event is action event.
+     */
     @FXML
     void view8(ActionEvent event) {
         try {
@@ -402,6 +430,10 @@ public class TeacherController implements Observer {
         }
     }
 
+    /**
+     * Showing the average scores in each questions from students for ninth subject
+     * @param event is action event.
+     */
     @FXML
     void view9(ActionEvent event) {
         try {
@@ -419,6 +451,10 @@ public class TeacherController implements Observer {
         }
     }
 
+    /**
+     * Showing the average scores in each questions from students for tenth subject
+     * @param event is action event.
+     */
     @FXML
     void view10(ActionEvent event) {
         try {
