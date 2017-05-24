@@ -25,6 +25,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
+/**
+ * Controller for Student with user interface.
+ * 
+ * @author Noppawan Kulchol
+ * @author Pawat Nakpiphatkul
+ *
+ */
 public class StudentController implements Observer {
 
     @FXML
@@ -156,11 +164,17 @@ public class StudentController implements Observer {
     private Course[] courses;
     private StudentModel model;
 
+    /**
+	 * For initialize before showing the window.
+	 */
     public void initialize() {
         reset();
         Sender.getInstance().addObserver(this);
     }
 
+    /**
+     * @see java.util.Observer#update(Observable, Object)
+     */
     @Override
     public void update(Observable subject, Object msg) {
         if (msg != null) {
@@ -289,6 +303,9 @@ public class StudentController implements Observer {
         }
     }
 
+    /**
+     * The method for reset courses, student's name, buttons.
+     */
     private void reset() {
         nameStudent.setText("Loading...");
         feedStudent1.setVisible(false);
@@ -353,6 +370,10 @@ public class StudentController implements Observer {
         IDStudent10.setText("");
     }
 
+    /**
+     * The method for send data of first course.
+     * @param event is action event.
+     */
     @FXML
     void send1(ActionEvent event) {
         try {
@@ -370,6 +391,10 @@ public class StudentController implements Observer {
         }
     }
 
+    /**
+     * The method for send data of second course.
+     * @param event is action event.
+     */
     @FXML
     void send2(ActionEvent event) {
         try {
@@ -387,6 +412,10 @@ public class StudentController implements Observer {
         }
     }
 
+    /**
+     * The method for send data of third course.
+     * @param event is action event.
+     */
     @FXML
     void send3(ActionEvent event) {
         try {
@@ -404,6 +433,10 @@ public class StudentController implements Observer {
         }
     }
 
+    /**
+     * The method for send data of fourth course.
+     * @param event is action event.
+     */
     @FXML
     void send4(ActionEvent event) {
         try {
@@ -421,6 +454,10 @@ public class StudentController implements Observer {
         }
     }
 
+    /**
+     * The method for send data of fifth course.
+     * @param event is action event.
+     */
     @FXML
     void send5(ActionEvent event) {
         try {
@@ -438,6 +475,10 @@ public class StudentController implements Observer {
         }
     }
 
+    /**
+     * The method for send data of sixth course.
+     * @param event is action event.
+     */
     @FXML
     void send6(ActionEvent event) {
         try {
@@ -455,6 +496,10 @@ public class StudentController implements Observer {
         }
     }
 
+    /**
+     * The method for send data of seventh course.
+     * @param event is action event.
+     */
     @FXML
     void send7(ActionEvent event) {
         try {
@@ -472,6 +517,10 @@ public class StudentController implements Observer {
         }
     }
 
+    /**
+     * The method for send data of eight course.
+     * @param event is action event.
+     */
     @FXML
     void send8(ActionEvent event) {
         try {
@@ -489,6 +538,10 @@ public class StudentController implements Observer {
         }
     }
 
+    /**
+     * The method for send data of ninth course.
+     * @param event is action event.
+     */
     @FXML
     void sent9(ActionEvent event) {
         try {
@@ -506,6 +559,10 @@ public class StudentController implements Observer {
         }
     }
 
+    /**
+     * The method for send data of tenth course.
+     * @param event is action event.
+     */
     @FXML
     void sent10(ActionEvent event) {
         try {

@@ -20,71 +20,82 @@ import coursefeedback.data.StudentModel;
 import coursefeedback.data.User;
 import java.util.List;
 
+/**
+ * Controller for Login with user interface.
+ * 
+ * @author Noppawan Kulchol
+ * @author Pawat Nakpiphatkul
+ *
+ */
 public class LoginController {
 
-    @FXML
-    private JFXTextField username;
+	@FXML
+	private JFXTextField username;
 
-    @FXML
-    private JFXPasswordField password;
+	@FXML
+	private JFXPasswordField password;
 
-    @FXML
-    private JFXButton login;
+	@FXML
+	private JFXButton login;
 
-    @FXML
-    private Label status;
+	@FXML
+	private Label status;
 
-    @FXML
-    public void login(ActionEvent event) throws Exception {
-        status.setText("Please wait...");
-        login.setDisable(true);
-        LoginModel model = new LoginModel(username.getText(), password.getText());
-        try {
-            if (model.verifyUser()) {
-                try {
-                    User user = new User(model.getUsername());
-                    if(user.getUserStatus() == 1) {
-                        Stage primaryStage = new Stage();
-                        Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Student.fxml"));
-                        Scene scene = new Scene(root);
-                        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-                        primaryStage.setTitle("Feedback for Student");
-                        primaryStage.setScene(scene);
-                        primaryStage.setResizable(false);
-                        primaryStage.show();
-                        Stage loginStage = (Stage) login.getScene().getWindow();
-                        loginStage.close();
-                        Sender.getInstance().send(new StudentModel(user), "UPDATE STUDENT DATA");
-                    }
-                    else if(user.getUserStatus() == 3) {
-                        Stage primaryStage = new Stage();
-                        Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Teacher.fxml"));
-                        Scene scene = new Scene(root);
-                        scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-                        primaryStage.setTitle("Feedback for Teacher");
-                        primaryStage.setScene(scene);
-                        primaryStage.setResizable(false);
-                        primaryStage.show();
-                        Stage loginStage = (Stage) login.getScene().getWindow();
-                        loginStage.close();
-                        Sender.getInstance().send(user, "SET TEACHER DATA");
-                    }
-                    else {
-                        status.setText("Incorrect user status : Access Denied");
-                    }
-                } catch (Exception e) {
-                    System.err.println(e.getMessage());
-                    e.printStackTrace();
-                }
-            } else {
-                status.setText("Incorrect username and/or password");
-            }
-        } catch (SQLException | ClassNotFoundException e) {
-            status.setText("ERROR : " + e.getMessage());
-        }
-        finally {
-            login.setDisable(false);
-        }
-    }
+	/**
+	 * The method for login in the application. There are students and teacher
+	 * that only can login to Feedback by verify user and password.
+	 * 
+	 * @param event
+	 * @throws Exception
+	 */
+	@FXML
+	public void login(ActionEvent event) throws Exception {
+		status.setText("Please wait...");
+		login.setDisable(true);
+		LoginModel model = new LoginModel(username.getText(), password.getText());
+		try {
+			if (model.verifyUser()) {
+				try {
+					User user = new User(model.getUsername());
+					if (user.getUserStatus() == 1) {
+						Stage primaryStage = new Stage();
+						Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Student.fxml"));
+						Scene scene = new Scene(root);
+						scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+						primaryStage.setTitle("Feedback for Student");
+						primaryStage.setScene(scene);
+						primaryStage.setResizable(false);
+						primaryStage.show();
+						Stage loginStage = (Stage) login.getScene().getWindow();
+						loginStage.close();
+						Sender.getInstance().send(new StudentModel(user), "UPDATE STUDENT DATA");
+					} else if (user.getUserStatus() == 3) {
+						Stage primaryStage = new Stage();
+						Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Teacher.fxml"));
+						Scene scene = new Scene(root);
+						scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+						primaryStage.setTitle("Feedback for Teacher");
+						primaryStage.setScene(scene);
+						primaryStage.setResizable(false);
+						primaryStage.show();
+						Stage loginStage = (Stage) login.getScene().getWindow();
+						loginStage.close();
+						Sender.getInstance().send(user, "SET TEACHER DATA");
+					} else {
+						status.setText("Incorrect user status : Access Denied");
+					}
+				} catch (Exception e) {
+					System.err.println(e.getMessage());
+					e.printStackTrace();
+				}
+			} else {
+				status.setText("Incorrect username and/or password");
+			}
+		} catch (SQLException | ClassNotFoundException e) {
+			status.setText("ERROR : " + e.getMessage());
+		} finally {
+			login.setDisable(false);
+		}
+	}
 
 }

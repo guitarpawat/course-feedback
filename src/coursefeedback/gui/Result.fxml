@@ -143,7 +143,7 @@
                   </JFXButton>
                </children>
             </GridPane>
-            <JFXButton fx:id="backToTeach" alignment="CENTER" buttonType="RAISED" layoutX="566.0" layoutY="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" style="-fx-background-color: #ff1a1a;" text="&lt;">
+            <JFXButton fx:id="backToTeach" alignment="CENTER" buttonType="RAISED" layoutX="566.0" layoutY="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#back" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" style="-fx-background-color: #ff1a1a;" text="&lt;">
                <font>
                   <Font name="Comic Sans MS Bold" size="15.0" />
                </font>

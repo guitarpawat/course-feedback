@@ -1,10 +1,20 @@
+package coursefeedback.gui;
+
 import com.jfoenix.controls.JFXButton;
 import java.util.Observable;
-import java.util.Observer;
+import java.util.Observer; 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollBar;
 
+
+/**
+ * Controller for Result of Feedback with user interface.
+ * 
+ * @author Noppawan Kulchol
+ * @author Pawat Nakpiphatkul
+ *
+ */
 public class ResultController implements Observer {
 
     @FXML
@@ -37,6 +47,9 @@ public class ResultController implements Observer {
     @FXML
     private JFXButton nextComment;
 
+    /**
+     * @see java.util.Observer#update(Observable, Object)
+     */
     @Override
     public void update(Observable subject, Object msg) {
     }

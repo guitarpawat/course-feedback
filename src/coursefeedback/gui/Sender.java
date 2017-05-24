@@ -7,7 +7,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * 
+ * 
+ * @author Noppawan Kulchol
  * @author Pawat Nakpiphatkul
  */
 public class Sender extends Observable {

@@ -17,6 +17,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+
+/**
+ * Controller for Teacher with user interface.
+ * 
+ * @author Noppawan Kulchol
+ * @author Pawat Nakpiphatkul
+ *
+ */
 public class TeacherController implements Observer {
 
     @FXML
@@ -142,16 +150,20 @@ public class TeacherController implements Observer {
     @FXML
     private JFXButton feedTeach2;
 
-    
-
     User teacher;
     Course[] courses;
 
+    /**
+	 * For initialize before showing the window.
+	 */
     public void initialize() {
         nameTeacher.setText("Loading...");
         Sender.getInstance().addObserver(this);
     }
 
+    /**
+     * @see java.util.Observer#update(Observable, Object)
+     */
     @Override
     public void update(Observable subject, Object msg) {
         if (msg != null) {
@@ -252,6 +264,10 @@ public class TeacherController implements Observer {
         }
     }
 
+    /**
+     * Showing the average scores in each questions from students for first subject
+     * @param event
+     */
     @FXML
     void view1(ActionEvent event) {
         try {
