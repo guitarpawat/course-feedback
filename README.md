@@ -29,6 +29,7 @@ Or you can use JAR file in library folder in our project.
 There are some patterns that had use in this program.
 * MVC Pattern — Separate the responsibility for control, model and view for GUI.
 * Singleton Pattern — Use all same object for the same class in the program.
+* Observer Pattern — Use to sent an object from one class to another class.
 
 ### Technology
 
@@ -263,7 +264,7 @@ SceneBuilder is an application where you can drag and drop JavaFX UI components,
 So, it is so easy to use and to spend less time for user interface.
 ![alt text](https://i.stack.imgur.com/kqFHf.png)
 
-#### Also see :
+#### Also see
 * http://docs.oracle.com/javafx/2/overview/jfxpub-overview.htm
 * http://docs.oracle.com/javafx/2/get_started/fxml_tutorial.htm#CHDCCHII
 * https://github.com/jfoenixadmin/JFoenix/blob/master/README.md
