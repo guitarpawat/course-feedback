@@ -37,7 +37,9 @@ public class StudentAdder {
                 int status = Integer.parseInt(in.nextLine());
                 System.out.println("Registered courses (comma separated) : ");
                 String courses = in.nextLine();
-                AddStudent bridge = new AddStudent(user,pass,first,last,status,courses);
+                System.out.println("Registered sections (comma separated) : ");
+                String sections = in.nextLine();
+                AddStudent bridge = new AddStudent(user,pass,first,last,status,courses,sections);
                 bridge.execute();
                 bridge.close();
             }
@@ -50,7 +52,7 @@ class AddStudent extends DBQuery {
     private DBConnector conn;
     
     AddStudent(Object... args) {
-        super.setPreparedCommand("INSERT INTO userinfo (username,hash,firstname,lastname,status,courses) VALUES (?,?,?,?,?,?)");
+        super.setPreparedCommand("INSERT INTO userinfo (username,hash,firstname,lastname,status,courses,sections) VALUES (?,?,?,?,?,?,?)");
         super.setBindValues(Arrays.asList(args));
         conn = new DBConnector();
     }

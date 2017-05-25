@@ -189,6 +189,6 @@ public class Course extends DBQuery {
      */
     @Override
     public String toString() {
-        return "Course " + getCourseID() + " : " + getCourseName();
+        return "Course " + courseID + " : " + courseName + " section " + section;
     }
 }
