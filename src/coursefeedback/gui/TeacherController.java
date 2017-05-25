@@ -268,19 +268,7 @@ public class TeacherController implements Observer {
      */
     @FXML
     void view1(ActionEvent event) {
-        try {
-            Stage primaryStage = new Stage();
-            Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Result.fxml"));
-            Scene scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            primaryStage.setTitle("Course " + courses[0].getCourseID() + " : " + courses[0].getCourseName() + " - Results");
-            primaryStage.setScene(scene);
-            primaryStage.setResizable(false);
-            primaryStage.show();
-            Sender.getInstance().send(new ResultModel(courses[0]), "GET COURSE RESULT");
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
+        view(0);
     }
 
     /**
@@ -289,19 +277,7 @@ public class TeacherController implements Observer {
      */
     @FXML
     void view2(ActionEvent event) {
-        try {
-            Stage primaryStage = new Stage();
-            Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Result.fxml"));
-            Scene scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            primaryStage.setTitle("Course " + courses[1].getCourseID() + " : " + courses[1].getCourseName() + " - Results");
-            primaryStage.setScene(scene);
-            primaryStage.setResizable(false);
-            primaryStage.show();
-            Sender.getInstance().send(new ResultModel(courses[1]), "GET COURSE RESULT");
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
+        view(1);
     }
 
     /**
@@ -310,19 +286,7 @@ public class TeacherController implements Observer {
      */
     @FXML
     void view3(ActionEvent event) {
-        try {
-            Stage primaryStage = new Stage();
-            Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Result.fxml"));
-            Scene scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            primaryStage.setTitle("Course " + courses[2].getCourseID() + " : " + courses[2].getCourseName() + " - Results");
-            primaryStage.setScene(scene);
-            primaryStage.setResizable(false);
-            primaryStage.show();
-            Sender.getInstance().send(new ResultModel(courses[2]), "GET COURSE RESULT");
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
+        view(2);
     }
 
     /**
@@ -331,19 +295,7 @@ public class TeacherController implements Observer {
      */
     @FXML
     void view4(ActionEvent event) {
-        try {
-            Stage primaryStage = new Stage();
-            Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Result.fxml"));
-            Scene scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            primaryStage.setTitle("Course " + courses[3].getCourseID() + " : " + courses[3].getCourseName() + " - Results");
-            primaryStage.setScene(scene);
-            primaryStage.setResizable(false);
-            primaryStage.show();
-            Sender.getInstance().send(new ResultModel(courses[3]), "GET COURSE RESULT");
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
+       view(3);
     }
 
     /**
@@ -352,19 +304,7 @@ public class TeacherController implements Observer {
      */
     @FXML
     void view5(ActionEvent event) {
-        try {
-            Stage primaryStage = new Stage();
-            Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Result.fxml"));
-            Scene scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            primaryStage.setTitle("Course " + courses[4].getCourseID() + " : " + courses[4].getCourseName() + " - Results");
-            primaryStage.setScene(scene);
-            primaryStage.setResizable(false);
-            primaryStage.show();
-            Sender.getInstance().send(new ResultModel(courses[4]), "GET COURSE RESULT");
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
+        view(4);
     }
 
     /**
@@ -373,19 +313,7 @@ public class TeacherController implements Observer {
      */
     @FXML
     void view6(ActionEvent event) {
-        try {
-            Stage primaryStage = new Stage();
-            Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Result.fxml"));
-            Scene scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            primaryStage.setTitle("Course " + courses[5].getCourseID() + " : " + courses[5].getCourseName() + " - Results");
-            primaryStage.setScene(scene);
-            primaryStage.setResizable(false);
-            primaryStage.show();
-            Sender.getInstance().send(new ResultModel(courses[5]), "GET COURSE RESULT");
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
+        view(5);
     }
 
     /**
@@ -394,19 +322,7 @@ public class TeacherController implements Observer {
      */
     @FXML
     void view7(ActionEvent event) {
-        try {
-            Stage primaryStage = new Stage();
-            Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Result.fxml"));
-            Scene scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            primaryStage.setTitle("Course " + courses[6].getCourseID() + " : " + courses[6].getCourseName() + " - Results");
-            primaryStage.setScene(scene);
-            primaryStage.setResizable(false);
-            primaryStage.show();
-            Sender.getInstance().send(new ResultModel(courses[6]), "GET COURSE RESULT");
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
+        view(6);
     }
 
     /**
@@ -415,19 +331,7 @@ public class TeacherController implements Observer {
      */
     @FXML
     void view8(ActionEvent event) {
-        try {
-            Stage primaryStage = new Stage();
-            Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Result.fxml"));
-            Scene scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            primaryStage.setTitle("Course " + courses[7].getCourseID() + " : " + courses[7].getCourseName() + " - Results");
-            primaryStage.setScene(scene);
-            primaryStage.setResizable(false);
-            primaryStage.show();
-            Sender.getInstance().send(new ResultModel(courses[7]), "GET COURSE RESULT");
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
+        view(7);
     }
 
     /**
@@ -436,19 +340,7 @@ public class TeacherController implements Observer {
      */
     @FXML
     void view9(ActionEvent event) {
-        try {
-            Stage primaryStage = new Stage();
-            Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Result.fxml"));
-            Scene scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            primaryStage.setTitle("Course " + courses[8].getCourseID() + " : " + courses[8].getCourseName() + " - Results");
-            primaryStage.setScene(scene);
-            primaryStage.setResizable(false);
-            primaryStage.show();
-            Sender.getInstance().send(new ResultModel(courses[8]), "GET COURSE RESULT");
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
+        view(8);
     }
 
     /**
@@ -457,16 +349,20 @@ public class TeacherController implements Observer {
      */
     @FXML
     void view10(ActionEvent event) {
+        view(9);
+    }
+    
+    private void view(int i) {
         try {
             Stage primaryStage = new Stage();
             Parent root = FXMLLoader.load(ClassLoader.getSystemResource("coursefeedback/gui/Result.fxml"));
             Scene scene = new Scene(root);
             scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-            primaryStage.setTitle("Course " + courses[9].getCourseID() + " : " + courses[9].getCourseName() + " - Results");
+            primaryStage.setTitle(courses[i].toString() + " - Results");
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);
             primaryStage.show();
-            Sender.getInstance().send(new ResultModel(courses[9]), "GET COURSE RESULT");
+            Sender.getInstance().send(new ResultModel(courses[i]), "GET COURSE RESULT");
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }

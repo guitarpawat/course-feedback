@@ -183,4 +183,12 @@ public class Course extends DBQuery {
         }
         return studentArr;
     }
+    
+    /**
+     * @see java.lang.Object#toString() 
+     */
+    @Override
+    public String toString() {
+        return "Course " + getCourseID() + " : " + getCourseName();
+    }
 }
