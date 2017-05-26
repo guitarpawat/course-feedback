@@ -9,13 +9,31 @@ This program receives data of student, teacher and course from the database and 
 
 ## About the Program
 
-### Required Library
+### Installation
+
+This program runs on Java 8 with **Internet Connection**.
+
+#### Required Library
 
 * JBCrypt — http://www.mindrot.org/projects/jBCrypt/
 * MySQL Connector/J for JDBC — https://dev.mysql.com/downloads/connector/j/
 * JFoenix — https://github.com/jfoenixadmin/JFoenix
 
 Or you can use JAR file in library folder in our project.
+
+#### How to Run
+
+##### Option 1
+
+1. Download **whole** dist folder that contains runnable CourseFeedback.jar and lib folder.
+1. Runs CourseFeedback.jar file.
+
+##### Option 2
+
+1. Download the latest release of this program.
+1. Open Java text editor.
+1. Create Java project and include JAR file in library folder.
+1. Runs the program.
 
 ### Packages
 * *default* — Contains important class for this program.
