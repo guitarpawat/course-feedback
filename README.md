@@ -35,6 +35,24 @@ Or you can use JAR file in library folder in our project.
 1. Create Java project and include JAR file in library folder.
 1. Runs the program.
 
+#### Demo User
+
+##### Teachers
+
+| Username | Password |
+|----------|----------|
+|eng       |hum       |
+|mathsci   |ihatemaths|
+|philo     |42answertoeverything|
+
+##### Students
+
+| Username | Password |
+|----------|----------|
+|student1  |std1      |
+|student2  |nisit2    |
+|student3  |ilikesleeping|
+
 ### Packages
 * *default* — Contains important class for this program.
 * data — Contains model and data object class.
