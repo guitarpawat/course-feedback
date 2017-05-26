@@ -178,7 +178,7 @@ public static void main(String[] args) throws SQLException, ClassNotFoundExcepti
 #### SQL Injection
 It is very dangerous to run a command like :
 ```java
-stmt.execute("INSETRT INTO students (name) VALUES (" + inString +")");
+stmt.execute("INSETRT INTO students (name) VALUES (\'" + inString +"\')");
 ```
 This is vulnerable to the SQL injection as if when `inString = "Robert'); DROP TABLE students; ..."`
 This command will adds Robert to the column `name` of table `students` and then drop the table `students`! This command is very destructive. This is called **SQL Injection**
