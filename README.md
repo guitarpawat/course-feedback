@@ -207,7 +207,7 @@ The bind values will replace some special character like `'` and `"` with escape
 * https://en.wikipedia.org/wiki/SQL_injection
 * http://php.net/manual/en/security.database.sql-injection.php
 
-#### Creation of user interface
+#### Starter code for JavaFX
 We use JavaFX, it is a set of graphics and media packages that enables developers to design, create, test, debug, and deploy rich client applications that operate consistently across diverse platforms. With JavaFX, you can build many types of applications. Typically, they are network-aware applications that are deployed across multiple platforms and display information in a high-performance modern user interface that features audio, video, graphics, and animation.
 Next is the code example for start the program's window.
 Try this :
